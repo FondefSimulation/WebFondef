@@ -1,4 +1,4 @@
-<div class="container" *ngIf="!identity">
+<!-- <div class="container" *ngIf="!identity">
   <div class="col-lg-12">
 
     <div class="alert alert-success" *ngIf="status == 'success'">
@@ -39,7 +39,49 @@
         </div>
       </div>
     </form>
-    
+
   </div>
-  <app-usera></app-usera>
+</div> -->
+
+<div class="container">
+
+  <!-- <div class="alert alert-success" *ngIf="status == 'success'">
+    Login correcto!!
+  </div>
+
+  <div class="alert alert-danger" *ngIf="status == 'error'">
+    Login incorrecto!!
+  </div> -->
+
+  <div id="enter">
+    <div class="logo-image">
+      <img src="/assets/img/logo-main.png" alt="Logo" title="Logo">
+    </div>
+    <h1>Ingresar</h1>
+    <form role="form" #loginForm="ngForm" (ngSubmit)="onSubmit()">
+
+      <div id="form-login-username" class="input-group">
+
+        <input id="username" class="form-control input-field" name="user" type="text" #name="ngModel"
+        [(ngModel)]="user.name" placeholder="&#xf007; Ingresar usuario" required />
+        <span *ngIf="!name.valid && name.touched">
+          El usuarios es obligatoria
+        </span>
+      </div>
+
+      <div id="form-login-password" class="input-group">
+
+        <input id="passwd" class="form-control input-field" name="password" type="password" #password="ngModel"
+        [(ngModel)]="user.password" placeholder="&#xf084; Ingresar clave" required />
+        <span *ngIf="!password.valid && password.touched">
+          La password es obligatoria
+        </span>
+      </div>
+
+      <div id="submit-buton" class="input-group">
+        <input class="btn btn-ok input-field" type="submit" name="Submit" alt="sign in" value="Entrar">
+      </div>
+
+    </form>
+  </div>
 </div>
