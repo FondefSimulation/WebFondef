@@ -1,0 +1,130 @@
+<div>
+  <div>
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/img/logo-main.png" width="10%" height="10%" alt="">
+        <a class="navbar-brand">VIDEO JUEGOS SERIOS PARA LA TOMA DE DESICIONES FRENTE A DESASTRES</a>
+      </a>
+    </nav>
+  </div>
+
+  <div class="main-bar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active name" >
+            <a class="nav-link" >Perfil: {{ identity.role }}</a>
+          </li>
+          <li class="nav-item name" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['../home']">Desastres</a>
+          </li>
+          <li class="nav-item name" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['../sessions']">Sesiones</a>
+          </li>
+          <li class="nav-item name" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['../condition']">Condiciones</a>
+          </li>
+          <li class="nav-item name" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['../scripts']">Guiones</a>
+          </li>
+          <li class="nav-item name" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['../results']">Resutados</a>
+          </li>
+        </ul>
+
+        <span class="navbar-text">
+          <div class="logout">
+            <button (click)="logout()" type="button" name="button"><i class="fa fa fa-sign-out" aria-hidden="true"></i>Salir</button>
+          </div>
+        </span>
+
+      </div>
+    </nav>
+  </div>
+
+  <div class="container main-container">
+    <div class="form-group row">
+      <label class="col-sm-4 col-form-label">Nombre del perfil</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-4 col-form-label">Mostrar</label>
+      <div class="col-sm-8">
+        <select class="custom-select mr-sm-8">
+          <option selected>10</option>
+          <option value="1">25</option>
+          <option value="2">50</option>
+          <option value="3">100</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table">
+        <thead class="thead-inverse">
+          <tr>
+            <th>ID</th>
+            <th>Simulación</th>
+            <th>Nombre</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Escenario</th>
+            <th>Usuario</th>
+            <th>Tipo de Usuario</th>
+            <th>Variables Iniciales</th>
+            <th>Efecto cascada</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td><i class="fa fa-eye" aria-hidden="true" (click)="viewResult()"></i></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td><i class="fa fa-eye" aria-hidden="true" (click)="viewResult()"></i></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td><i class="fa fa-eye" aria-hidden="true" (click)="viewResult()"></i></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,88 @@
+.name{
+  margin-bottom: 10px;
+  /*border-bottom: 6px solid #0088D8;*/
+}
+.name:hover{
+  cursor: default;
+  margin-bottom: -7px;
+  border-bottom: 6px solid #0088D8;
+}
+.btn{
+  cursor: pointer;
+}
+.fa-sign-out{
+  font-size: 18px;
+}
+.main-container{
+  margin-top: 20px;
+  width: 52.9%;
+}
+input[type="text"]:disabled {
+  background: #dddddd;
+}
+.main-container1 button[class="tablinks"]{
+  padding: 7.1px;
+  font-size: 15px;
+}
+.main-container2{
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.main-container2 button[class="tablinks"]{
+  padding: 7.1px;
+  font-size: 15px;
+}
+.newSesion button{
+    background: none !important;
+    color: inherit;
+    border: none;
+    padding: 0! important;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit !important;
+}
+
+div.tab {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    margin-bottom: 15px;
+}
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 7.1px;
+    font-size: 15px;
+}
+div.tab button:hover {
+    background-color: #ddd;
+}
+div.tab button.active {
+    background-color: #ccc;
+}
+.tabcontent {
+    display: none;
+    border-top: none;
+}
+.form-container{
+  position: relative;
+  -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+  -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  padding: 15px;
+  background: white;
+}
+.logout button, input[type="submit"], input[type="reset"] {
+    background: none !important;
+    color: inherit;
+    border: none;
+    padding: 0! important;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit !important;
+}
+.logout button:hover{
+  color: black;
+}

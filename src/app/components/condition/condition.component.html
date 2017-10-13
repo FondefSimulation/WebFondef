@@ -1,0 +1,394 @@
+<div>
+  <div>
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/img/logo-main.png" width="10%" height="10%" alt="">
+        <a class="navbar-brand">VIDEO JUEGOS SERIOS PARA LA TOMA DE DESICIONES FRENTE A DESASTRES</a>
+      </a>
+    </nav>
+  </div>
+
+  <div class="main-bar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active name" >
+            <a class="nav-link" >Perfil: {{ identity.role }}</a>
+          </li>
+          <li class="nav-item name" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['../home']">Desastres</a>
+          </li>
+          <li class="nav-item name" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['../sessions']">Sesiones</a>
+          </li>
+          <li class="nav-item name" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['../condition']">Condiciones</a>
+          </li>
+          <li class="nav-item name" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['../scripts']">Guiones</a>
+          </li>
+          <li class="nav-item name" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['../results']">Resutados</a>
+          </li>
+        </ul>
+
+        <span class="navbar-text">
+          <div class="logout">
+            <button (click)="logout()" type="button" name="button"><i class="fa fa fa-sign-out" aria-hidden="true"></i>Salir</button>
+          </div>
+        </span>
+
+      </div>
+    </nav>
+  </div>
+
+  <div class="container main-container">
+    <h1>Perfiles</h1>
+    <div class="form-container">
+
+      <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Seleccionar Perfil</label>
+        <div class="col-sm-8">
+          <select class="custom-select mr-sm-8">
+            <option selected>- Ninguno -</option>
+            <option value="1">Perfil 01</option>
+            <option value="2">Perfil 02</option>
+            <option value="3">Perfil 03</option>
+          </select>
+        </div>
+      </div>
+
+
+      <div class="tab">
+        <button class="tablinks" (click)="open($event, 'recursos')">Recursos para el Jefe</button>
+        <button class="tablinks" (click)="open($event, 'terrenos')">Terreno</button>
+        <button class="tablinks" (click)="open($event, 'desastre')">Variable de Desastre</button>
+        <button class="tablinks" (click)="open($event, 'flujo')">Variable de flujo de Desastre</button>
+      </div>
+
+      <div id="recursos" class="tabcontent">
+        <div class="form-group row">
+          <label class="col-sm-8 col-form-label"></label>
+          <div class="col-sm-4">
+            Valores Iniciales
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-8 col-form-label">Equipos mecanizados Tipo A: motosierra</label>
+          <div class="col-sm-4">
+            <input type="text" disabled="disabled" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-8 col-form-label">Equipos mecanizados Tipo B: motobomba</label>
+          <div class="col-sm-4">
+            <input type="text" disabled="disabled" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-8 col-form-label">Herramientas generales (mascarillas tanuqes de oxigeno, hachas, extintores, radios, palas)</label>
+          <div class="col-sm-4">
+            <input type="text" disabled="disabled" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-8 col-form-label">Elementos de primeros auxilios</label>
+          <div class="col-sm-4">
+            <input type="text" disabled="disabled" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-8 col-form-label">Bomberos</label>
+          <div class="col-sm-4">
+            <input type="text" disabled="disabled" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-8 col-form-label">Carros Bomba</label>
+          <div class="col-sm-4">
+            <input type="text" disabled="disabled" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-8 col-form-label">Helicopteros</label>
+          <div class="col-sm-4">
+            <input type="text" disabled="disabled" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-8 col-form-label">Aviones</label>
+          <div class="col-sm-4">
+            <input type="text" disabled="disabled" class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div id="terrenos" class="tabcontent">
+        <div class="form-group row">
+          <label class="col-sm-8 col-form-label"></label>
+          <div class="col-sm-4">
+            Valores Iniciales
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-8 col-form-label">Niveles de obstaculos</label>
+          <div class="col-sm-4">
+            <input type="text" disabled="disabled" class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div id="desastre" class="tabcontent">
+        <div class="form-group row">
+          <label class="col-sm-8 col-form-label"></label>
+          <div class="col-sm-4">
+            Valores Iniciales
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-8 col-form-label">Probabilidad de rebrote de incendio</label>
+          <div class="col-sm-4">
+            <input type="text" disabled="disabled" class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div id="flujo" class="tabcontent">
+        <div class="form-group row">
+          <label class="col-sm-8 col-form-label"></label>
+          <div class="col-sm-4">
+            Valores Iniciales
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-8 col-form-label">Nivel de congestion</label>
+          <div class="col-sm-4">
+            <input type="text" disabled="disabled" class="form-control">
+          </div>
+        </div>
+
+      </div>
+
+      <br>
+      <div class="form-group row">
+        <div class="col-sm-4">
+          <button type="submit" class="btn btn-primary">Borrar Perfil</button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="container main-container2">
+    <h1>Nuevo Perfil</h1>
+    <div class="form-container">
+
+      <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Nombre del perfil</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control">
+        </div>
+      </div>
+
+      <div class="tab">
+        <button class="tablinks" (click)="open($event, 'recursosJ')">Recursos Jefe</button>
+        <button class="tablinks" (click)="open($event, 'recursosC')">Recursos CONAF</button>
+        <button class="tablinks" (click)="open($event, 'ambiente')">Variable de Medio ambiente</button>
+        <button class="tablinks" (click)="open($event, 'impacto')">Variables de impacto</button>
+        <button class="tablinks" (click)="open($event, 'terreno')">Terreno</button>
+        <button class="tablinks" (click)="open($event, 'vdesastre')">Variable de desastres</button>
+        <button class="tablinks" (click)="open($event, 'vrecursos')">Variable de flujo de recursos</button>
+      </div>
+
+      <div id="recursosJ" class="tabcontent">
+        <table class="table table-inverse">
+          <thead>
+            <tr>
+              <th>1</th>
+              <th>Valor Inicial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="recursosC" class="tabcontent">
+        <table class="table table-inverse">
+          <thead>
+            <tr>
+              <th>2</th>
+              <th>Valor Inicial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="ambiente" class="tabcontent">
+        <table class="table table-inverse">
+          <thead>
+            <tr>
+              <th>3</th>
+              <th>Valor Inicial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="impacto" class="tabcontent">
+        <table class="table table-inverse">
+          <thead>
+            <tr>
+              <th>4</th>
+              <th>Valor Inicial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="terreno" class="tabcontent">
+        <table class="table table-inverse">
+          <thead>
+            <tr>
+              <th>4</th>
+              <th>Valor Inicial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="vdesastre" class="tabcontent">
+        <table class="table table-inverse">
+          <thead>
+            <tr>
+              <th>4</th>
+              <th>Valor Inicial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="vrecursos" class="tabcontent">
+        <table class="table table-inverse">
+          <thead>
+            <tr>
+              <th>4</th>
+              <th>Valor Inicial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <br>
+      <div class="form-group row">
+        <div class="col-sm-4">
+          <button type="submit" class="btn btn-primary">Guardar Perfil</button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,203 @@
+<div>
+  <div>
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/img/logo-main.png" width="10%" height="10%" alt="">
+        <h1 class="navbar-brand">VIDEO JUEGOS SERIOS PARA LA TOMA DE DESICIONES FRENTE A DESASTRES</h1>
+      </a>
+    </nav>
+  </div>
+
+  <div class="main-bar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active name" >
+            <a class="nav-link" >Perfil: {{ identity.role }}</a>
+          </li>
+          <li class="nav-item name" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['../home']">Desastres</a>
+          </li>
+          <li class="nav-item name" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['../sessions']">Sesiones</a>
+          </li>
+          <li class="nav-item name" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['../condition']">Condiciones</a>
+          </li>
+          <li class="nav-item name" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['../scripts']">Guiones</a>
+          </li>
+          <li class="nav-item name" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['../results']">Resutados</a>
+          </li>
+        </ul>
+
+        <span class="navbar-text">
+          <div class="logout">
+            <button (click)="logout()" type="button" name="button"><i class="fa fa fa-sign-out" aria-hidden="true"></i>Salir</button>
+          </div>
+        </span>
+
+      </div>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="">
+
+      <div class="map">
+        Plugin google map
+      </div>
+
+      <div class="panel">
+
+        <h1>Nuevo Guion</h1>
+        <div class="form-container">
+          <form>
+            <div class="form-group row">
+              <label class="col-sm-4 col-form-label">Nombre del Guion</label>
+              <div class="col-sm-8">
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-4 col-form-label">Duración de la Simulación</label>
+              <div class="col-sm-5">
+                <input type="text" class="form-control">
+              </div>
+              <label class="col-sm-3 col-form-label">Minutos</label>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-4 col-form-label">Escenario</label>
+              <div class="col-sm-8">
+                <select class="custom-select mr-sm-8">
+                  <option selected>- Ninguno -</option>
+                  <option value="1">Escenario 01</option>
+                  <option value="2">Escenario 02</option>
+                  <option value="3">Escenario 03</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Eventos</h1>
+    <div class="form-container">
+      <div class="table-responsive">
+        <table class="table">
+          <thead class="thead-inverse">
+            <tr>
+              <th>Evento</th>
+              <th>Tipo</th>
+              <th>Indetificador</th>
+              <th>Valor</th>
+              <th></th>
+              <th>Tiempo</th>
+              <th>Probabilidad</th>
+              <th>Nº de dependencias con el Evento</th>
+              <th>Nº de dependencias con los Actores</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <div class="col-sm-12">
+                  <select class="custom-select mr-sm-8">
+                    <option selected>- Seleccionar -</option>
+                    <option value="1">Seleccion 01</option>
+                    <option value="2">Seleccion 02</option>
+                    <option value="3">Seleccion 03</option>
+                  </select>
+                </div>
+              </th>
+              <th>
+                <div class="form-group row">
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+              </th>
+              <th>
+                <div class="form-group row">
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+              </th>
+              <th>
+                <div class="form-group row">
+                  <div class="col-sm-14">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+              </th>
+              <th>
+                <i class="fa fa-map-pin" aria-hidden="true"></i>
+              </th>
+              <th>
+                <div class="form-group row">
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+              </th>
+              <th>
+                <div class="form-group row">
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+              </th>
+              <th>
+                <div class="form-group row">
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+              </th>
+              <th>
+                <div class="form-group row">
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+              </th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="">
+        <div class="new">
+          <button type="button" name="button"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+        </div>
+        <br>
+        <h5>Descripción del Guion</h5>
+        <textarea rows="7" cols="133">
+
+        </textarea>
+      </div>
+      <br>
+      <div class="form-group row">
+        <div class="col-sm-10">
+          <button type="submit" class="btn btn-primary">Guardar lista de Eventos</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
