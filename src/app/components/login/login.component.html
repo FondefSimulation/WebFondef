@@ -63,7 +63,7 @@
       <div id="form-login-username" class="input-group">
 
         <input id="username" class="form-control input-field" name="user" type="text" #name="ngModel"
-        [(ngModel)]="user.name" placeholder="&#xf007; Ingresar usuario" required />
+        [(ngModel)]="user.name" placeholder="&#xf007; Usuario" required />
         <span *ngIf="!name.valid && name.touched">
           El usuarios es obligatoria
         </span>
@@ -72,7 +72,7 @@
       <div id="form-login-password" class="input-group">
 
         <input id="passwd" class="form-control input-field" name="password" type="password" #password="ngModel"
-        [(ngModel)]="user.password" placeholder="&#xf084; Ingresar clave" required />
+        [(ngModel)]="user.password" placeholder="&#xf084; Contraseña" required />
         <span *ngIf="!password.valid && password.touched">
           La password es obligatoria
         </span>
