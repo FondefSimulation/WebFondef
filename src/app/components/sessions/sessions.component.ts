@@ -54,7 +54,7 @@ export class SessionsComponent implements OnInit {
   Simulation(id){
     console.log(id);
     this._router.navigate([ '/simulation' ], { queryParams: { idSimulation: this.sessions[id].id } });
-    this._consumeRestAPIService.JoinSimulation( id ).subscribe( result => console.log( result ) );
+    //this._consumeRestAPIService.JoinSimulation( id ).subscribe( result => console.log( result ) );
   }
 
 }
