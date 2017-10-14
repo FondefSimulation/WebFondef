@@ -43,7 +43,7 @@
   </div>
 </div> -->
 
-<div class="container">
+<div class="container" *ngIf="!identity">
 
   <div class="alert alert-success" *ngIf="status == 'success'">
     Login correcto!!
