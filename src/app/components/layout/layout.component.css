@@ -1,5 +1,20 @@
 body{
-  font-size:100%
+  font-size:100%;
+}
+.body{
+  background: #eeeeee;
+  width: 100%;
+  height: 100%;
+}
+.navbar{
+  background-color: #1c313f;
+  color: white;
+}
+.navbar a{
+  color: white;
+}
+.main-bar{
+  background-color: #1c313f;
 }
 .footers{
   font-size: 12px;
@@ -48,14 +63,6 @@ body{
   padding-top: 15px;
   display: table;
   margin: 0 auto;
-}
-.card{
-  -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
-  -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
-  color: white;
-  background-size: cover;
-  background-image: url('/assets/img/disaster-fuego.jpg');
 }
 h1{
      word-wrap: break-word;

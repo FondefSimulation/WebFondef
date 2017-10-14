@@ -25,6 +25,7 @@ import { ConsumeRestAPIService } from './services/consume-rest-api.service';
 import { SimulationComponent } from './components/simulation/simulation.component';
 import { ViewComponent } from './components/view/view.component';
 import { EditComponent } from './components/edit/edit.component';
+import { LayoutComponent } from './components/layout/layout.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { EditComponent } from './components/edit/edit.component';
     UseraComponent,
     SimulationComponent,
     ViewComponent,
-    EditComponent
+    EditComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
