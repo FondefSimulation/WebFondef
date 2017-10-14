@@ -46,15 +46,16 @@
     </nav>
   </div>
 
-  <div class="disaster">
+  <div class="namDis">
     <select class="custom-select mr-sm-8" id="type_disaster" #typeDisaster (change)="showDisaster()">
       <option selected>- Seleccionar -</option>
       <option *ngFor="let type of disasters" [value]="type.id">{{ type.name }}</option>
     </select>
-
+  </div>
+  <div class="disaster">
     <div class="card" style="width: 20rem;" id="tD">
       <div class="card-body">
-        <h4 class="card-title">Incendio</h4>
+        <h4 class="card-title">{{ this.nameDisaster }}</h4>
         <button (click)="getType()" type="button" class="btn btn-primary" name="button">Cambiar</button>
       </div>
     </div>

@@ -20,6 +20,11 @@ body{
   margin-top: 20px;
   width: 60%;
 }
+.namDis{
+  padding-top: 15px;
+  display: table;
+  margin: 0 auto;
+}
 .disaster{
   padding-top: 15px;
   display: table;

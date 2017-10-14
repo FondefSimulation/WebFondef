@@ -15,13 +15,9 @@ export class HomeComponent implements OnInit {
 
   public identity;
   public type;
-  disasters = [
-    { id: 1, name: 'incendio' },
-    { id: 2, name: 'inundacion' },
-    { id: 3, name: 'terremoto' }
-  ];
+  public nameDisaster;
 
-  // disasters = {}
+  disasters = [];
 
   constructor(
     private _consumeRestAPIService: ConsumeRestAPIService,
@@ -32,8 +28,7 @@ export class HomeComponent implements OnInit {
     this.identity = this._consumeRestAPIService.getIdentity();
     this.type = this._consumeRestAPIService.getType();
     document.getElementById( 'tD' ).hidden = true;
-    this._consumeRestAPIService.GetTypeDisaster().subscribe( data => { this.disasters = data['disasters'] });
-    console.log( this.disasters )
+    this._consumeRestAPIService.GetTypeDisaster().subscribe( response => { this.disasters=response.data; });
   }
 
   ngDoCheck(){
@@ -50,7 +45,7 @@ export class HomeComponent implements OnInit {
 
   showDisaster(){
     var disaster = this.typeDisaster.nativeElement.value;
-    console.log(disaster)
+    this.nameDisaster = this.disasters[ disaster - 1 ].name;
     document.getElementById( 'tD' ).hidden = false;
   }
 

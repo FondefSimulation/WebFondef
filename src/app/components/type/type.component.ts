@@ -15,6 +15,7 @@ import { NgFor } from '@angular/common';
 export class TypeComponent implements OnInit {
 
   public identity;
+  public nameDisaster;
   /*disasters = [
     { id: 1, name: 'incendio' },
     { id: 2, name: 'inundacion' },
@@ -32,9 +33,8 @@ export class TypeComponent implements OnInit {
     this.identity = this._consumeRestAPIService.getIdentity();
     document.getElementById( 'tD' ).hidden = true;
     //añadir metodo getTypeDisaster
-  //this._consumeRestAPIService.GetTypeDisaster().subscribe( data => { this.disasters = data.data['disasters'] });
-  this._consumeRestAPIService.GetTypeDisaster().subscribe( response => { this.disasters=response.data; });  
-  
+    //this._consumeRestAPIService.GetTypeDisaster().subscribe( data => { this.disasters = data.data['disasters'] });
+    this._consumeRestAPIService.GetTypeDisaster().subscribe( response => { this.disasters=response.data; });
   }
 
   ngDoCheck(){
@@ -51,7 +51,7 @@ export class TypeComponent implements OnInit {
 
   showDisaster(){
     var disaster = this.typeDisaster.nativeElement.value;
-    console.log(disaster)
+    this.nameDisaster = this.disasters[ disaster - 1 ].name;
     document.getElementById( 'tD' ).hidden = false;
   }
 
