@@ -22,7 +22,7 @@ export class TypeComponent implements OnInit {
     { id: 3, name: 'terremoto' }
   ];*/
 
-   disasters =[];
+  public disasters =[];
 
   constructor(
     private _consumeRestAPIService: ConsumeRestAPIService,
@@ -35,6 +35,7 @@ export class TypeComponent implements OnInit {
     //añadir metodo getTypeDisaster
     //this._consumeRestAPIService.GetTypeDisaster().subscribe( data => { this.disasters = data.data['disasters'] });
     this._consumeRestAPIService.GetTypeDisaster().subscribe( response => { this.disasters=response.data; });
+    console.log(this.disasters)
   }
 
   ngDoCheck(){

@@ -7,6 +7,8 @@ import { APP_ROUTING, ROUTINGPROVIDERS } from './app.routing';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AgmCoreModule } from '@agm/core';
 import { SelectModule } from 'angular2-select';
+import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatInputModule } from '@angular/material';
+
 
 
 //Components
@@ -54,6 +56,13 @@ import { LayoutComponent } from './components/layout/layout.component';
     HttpModule,
     FormsModule,
     BrowserAnimationsModule,
+    MatButtonModule,
+    MatCardModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatInputModule,
     ROUTINGPROVIDERS,
     APP_ROUTING
   ],

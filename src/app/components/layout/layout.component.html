@@ -1,4 +1,4 @@
-<div>
+<div *ngIf="identity">
   <div>
     <nav class="navbar navbar-light">
       <a class="navbar-brand">
@@ -55,5 +55,8 @@
       <p class="footers">Proyecto N° IT16I10096 - Simulador basado en video juego para respuesta a desastres</p>
     </div>
   </div>
+</div>
 
+<div class="" *ngIf="!identity">
+  <app-login></app-login>
 </div>

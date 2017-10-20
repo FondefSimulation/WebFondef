@@ -45,13 +45,7 @@
 
 <div class="container" *ngIf="!identity">
 
-  <div class="alert alert-success" *ngIf="status == 'success'">
-    Login correcto!!
-  </div>
 
-  <div class="alert alert-danger" *ngIf="status == 'error'">
-    Login incorrecto!!
-  </div>
 
   <div id="enter">
     <div class="logo-image">
@@ -65,7 +59,7 @@
         <input id="username" class="form-control input-field" name="user" type="text" #name="ngModel"
         [(ngModel)]="user.name" placeholder="&#xf007; Usuario" required />
         <span *ngIf="!name.valid && name.touched">
-          El usuarios es obligatoria
+          El usuarios es obligatorio
         </span>
       </div>
 
@@ -76,6 +70,14 @@
         <span *ngIf="!password.valid && password.touched">
           La password es obligatoria
         </span>
+      </div>
+
+      <div class="alert alert-success" *ngIf="status == 'success'">
+        Login correcto!!
+      </div>
+
+      <div class="alert alert-danger" *ngIf="status == 'error'">
+        Username or password invalid
       </div>
 
       <div id="submit-buton" class="input-group">

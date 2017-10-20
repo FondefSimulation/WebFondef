@@ -53,7 +53,8 @@ export class LoginComponent implements OnInit {
         console.log(this.token);
 
         if ( !this.identity || !this.identity._id ) {
-          alert( 'El usuario no se ha logueado correctamente' );
+          // alert( 'El usuario no se ha logueado correctamente' );
+          this.status = 'error';
         }else{
           this.identity.password = '';
           localStorage.setItem( 'identity', JSON.stringify( this.identity ) );
