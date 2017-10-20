@@ -25,7 +25,7 @@ body{
 }*/
 .footerholder {
     bottom: 0;
-    position: fixed;
+    /*position: fixed;*/
     text-align: center;
     width: 100%;
 }
@@ -41,7 +41,7 @@ body{
 }
 .name:hover{
   cursor: default;
-  margin-bottom: -7px;
+  margin-bottom: -8px;
   border-bottom: 6px solid #0088D8;
 }
 .btn{
@@ -79,7 +79,7 @@ h1{
 }
 .logout button, input[type="submit"], input[type="reset"] {
     background: none !important;
-    color: inherit;
+    color: white;
     border: none;
     padding: 0! important;
     font: inherit;
