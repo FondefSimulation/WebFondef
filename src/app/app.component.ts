@@ -7,6 +7,7 @@ import { ConsumeRestAPIService } from './services/consume-rest-api.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
   providers: [ UserService ]
 })
 export class AppComponent implements OnInit, DoCheck {

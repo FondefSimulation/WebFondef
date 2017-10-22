@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 // import { Session } from '../../models/session';
 import { Session } from '../../models/user';
 
@@ -28,12 +28,12 @@ export class NewsessionsComponent implements OnInit {
   ngOnInit() {
     this.identity = this._consumeRestAPIService.getIdentity();
     this.type = this._consumeRestAPIService.getType();
-
   }
 
   ngDoCheck(){
     this.identity = this._consumeRestAPIService.getIdentity();
   }
+
 
   logout(){
     localStorage.clear();

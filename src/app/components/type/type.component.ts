@@ -35,7 +35,6 @@ export class TypeComponent implements OnInit {
     //añadir metodo getTypeDisaster
     //this._consumeRestAPIService.GetTypeDisaster().subscribe( data => { this.disasters = data.data['disasters'] });
     this._consumeRestAPIService.GetTypeDisaster().subscribe( response => { this.disasters=response.data; });
-    console.log(this.disasters)
   }
 
   ngDoCheck(){

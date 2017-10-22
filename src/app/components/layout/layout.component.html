@@ -1,11 +1,11 @@
 <div *ngIf="identity">
   <div>
-    <nav class="navbar navbar-light">
+    <div class="navbar navbar-light">
       <a class="navbar-brand">
         <img src="/assets/img/logo-main.png" width="10%" height="10%" alt="">
         <a class="">VIDEO JUEGOS SERIOS PARA LA TOMA DE DESICIONES FRENTE A DESASTRES</a>
       </a>
-    </nav>
+    </div>
   </div>
 
 
@@ -19,19 +19,19 @@
           <li class="nav-item name" >
             <a class="nav-link" >Perfil: {{ identity.role }}</a>
           </li>
-          <li class="nav-item name" routerLinkActive="active">
+          <li class="nav-item name" routerLinkActive="active" *ngIf="type">
             <a class="nav-link" [routerLink]="['../home']">Desastres</a>
           </li>
-          <li class="nav-item name" routerLinkActive="active">
+          <li class="nav-item name" routerLinkActive="active" *ngIf="type">
             <a class="nav-link" [routerLink]="['../sessions']">Sesiones</a>
           </li>
-          <li class="nav-item name" routerLinkActive="active">
+          <li class="nav-item name" routerLinkActive="active" *ngIf="type">
             <a class="nav-link" [routerLink]="['../condition']">Condiciones</a>
           </li>
-          <li class="nav-item name" routerLinkActive="active">
+          <li class="nav-item name" routerLinkActive="active" *ngIf="type">
             <a class="nav-link" [routerLink]="['../scripts']">Guiones</a>
           </li>
-          <li class="nav-item name" routerLinkActive="active">
+          <li class="nav-item name" routerLinkActive="active" *ngIf="type">
             <a class="nav-link" [routerLink]="['../results']">Resutados</a>
           </li>
         </ul>
@@ -47,15 +47,11 @@
   </div>
 
   <div class="body">
-    <router-outlet></router-outlet>
+        <router-outlet></router-outlet>
   </div>
 
-  <div class="footerholder">
-    <div class="footer text-muted">
-      <p class="footers">Proyecto N° IT16I10096 - Simulador basado en video juego para respuesta a desastres</p>
-    </div>
-  </div>
-  
+
+
 </div>
 
 <div class="" *ngIf="!identity">

@@ -23,7 +23,8 @@ export class SessionsComponent implements OnInit {
     { id: 4, nameSession: "Session 04"}
   ];*/
 
-   sessions = [];
+
+  sessions = [];
 
   constructor(
     private _consumeRestAPIService: ConsumeRestAPIService,
@@ -36,7 +37,7 @@ export class SessionsComponent implements OnInit {
     //GetRunningSimulation
 
     //this._consumeRestAPIService.GetRunningSimulation( this.type ).subscribe( data => this.sessions = data );
-    this._consumeRestAPIService.GetRunningSimulation( this.type ).subscribe( response => { this.sessions=response.data; });  
+    this._consumeRestAPIService.GetRunningSimulation( this.type ).subscribe( response => { this.sessions=response.data; });
     //console.log( this.sessions );
 
   }
@@ -53,6 +54,7 @@ export class SessionsComponent implements OnInit {
 
   Simulation(id){
     console.log(id);
+    console.log(this.sessions)
     this._router.navigate([ '/simulation' ], { queryParams: { idSimulation: this.sessions[id].id } });
     //this._consumeRestAPIService.JoinSimulation( id ).subscribe( result => console.log( result ) );
   }

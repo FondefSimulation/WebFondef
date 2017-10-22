@@ -1,14 +1,15 @@
 <div>
 
   <div class="container main-container">
-    <h1>Nueva Sesion</h1>
     <div class="form-container">
+      <h1>Nueva Sesion</h1>
+      <hr>
       <form #loginForm="ngForm" (ngSubmit)="saveSession()">
         <div class="form-group row">
           <label class="col-sm-4 col-form-label">Nombre de la sesión</label>
           <div class="col-sm-8">
             <input type="text" class="form-control" name="name" #name="ngModel"
-            [(ngModel)]="session.nameSession" required />
+            [(ngModel)]="session.nameSession" />
           </div>
         </div>
         <div class="form-group row">

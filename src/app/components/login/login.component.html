@@ -58,9 +58,9 @@
 
         <input id="username" class="form-control input-field" name="user" type="text" #name="ngModel"
         [(ngModel)]="user.name" placeholder="&#xf007; Usuario" required />
-        <span *ngIf="!name.valid && name.touched">
+        <!-- <span *ngIf="!name.valid && name.touched">
           El usuarios es obligatorio
-        </span>
+        </span> -->
       </div>
 
       <div id="form-login-password" class="input-group">
@@ -77,7 +77,7 @@
       </div>
 
       <div class="alert alert-danger" *ngIf="status == 'error'">
-        Username or password invalid
+        {{ this.errorMsg }}
       </div>
 
       <div id="submit-buton" class="input-group">
@@ -85,5 +85,8 @@
       </div>
 
     </form>
+  </div>
+  <div class="" id="enter-footer">
+    <p>Proyecto N° IT16I10096 - Simulador basado en video juego para respuesta a desastres</p>
   </div>
 </div>

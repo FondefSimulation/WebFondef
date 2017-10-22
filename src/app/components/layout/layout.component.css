@@ -24,8 +24,8 @@ body{
   bottom: 0px;
 }*/
 .footerholder {
+    position: absolute;
     bottom: 0;
-    /*position: fixed;*/
     text-align: center;
     width: 100%;
 }
