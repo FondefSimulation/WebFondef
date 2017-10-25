@@ -44,6 +44,7 @@ export class SessionsComponent implements OnInit {
 
   ngDoCheck(){
     this.identity = this._consumeRestAPIService.getIdentity();
+    this._consumeRestAPIService.GetRunningSimulation( this.type ).subscribe( response => { this.sessions=response.data; });
   }
 
   logout(){

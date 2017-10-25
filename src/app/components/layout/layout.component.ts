@@ -26,6 +26,7 @@ export class LayoutComponent implements OnInit {
 
   ngDoCheck(){
     this.identity = this._consumeRestAPIService.getIdentity();
+    this.type = this._consumeRestAPIService.getType();
   }
 
   logout(){
