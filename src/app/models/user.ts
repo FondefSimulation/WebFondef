@@ -18,3 +18,16 @@ export class Session{
     public cascadeEffectSession: number
   ){}
 }
+
+export class Event{
+  constructor(
+    public event: string,
+    public type: string,
+    public identifier: string,
+    public value: number,
+    public time: number,
+    public probability: number,
+    public depEvents: number,
+    public depAct: number
+  ){}
+}

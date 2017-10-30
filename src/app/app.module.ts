@@ -8,7 +8,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AgmCoreModule } from '@agm/core';
 import { SelectModule } from 'angular2-select';
 import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatInputModule } from '@angular/material';
-
+import { ChartsModule } from 'ng2-charts';
 
 
 //Components
@@ -63,6 +63,7 @@ import { LayoutComponent } from './components/layout/layout.component';
     MatIconModule,
     MatSidenavModule,
     MatInputModule,
+    ChartsModule,
     ROUTINGPROVIDERS,
     APP_ROUTING
   ],

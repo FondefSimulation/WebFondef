@@ -65,7 +65,7 @@
               <th>Nº de dependencias con los Actores</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody *ngFor="let item of cantEvent">
             <tr>
               <th>
                 <div class="col-sm-12">
@@ -136,7 +136,7 @@
 
       <div class="">
         <div class="new">
-          <button type="button" name="button"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+          <button type="button" name="button"><i class="fa fa-plus-circle" aria-hidden="true" (click)="moreEvents()"></i></button>
         </div>
         <br>
         <h5>Descripción del Guion</h5>
