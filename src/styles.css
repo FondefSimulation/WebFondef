@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+  background-color: white;
+}
+.header{
+  height: 300px;
+  background-color: #1c313f;
+}

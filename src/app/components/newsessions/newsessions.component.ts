@@ -17,10 +17,11 @@ export class NewsessionsComponent implements OnInit {
   public identity;
   public type;
   public session: Session;
+  public data;
 
   constructor(
     private _consumeRestAPIService: ConsumeRestAPIService,
-    private _router: Router
+    private _router: Router,
   ) {
     this.session = new Session( '', this._consumeRestAPIService.getType(),'G10min', '', 0 );
   }
@@ -42,10 +43,10 @@ export class NewsessionsComponent implements OnInit {
   }
 
   saveSession(){
-    console.log(this.session)
+    console.log(this.data)
     //
     this._consumeRestAPIService.CreateSessionSimulation( this.session ).subscribe();
-    this._router.navigate([ '/sessions' ]);
+    // this._router.navigate([ '/sessions' ]);
     // recive la id y pasa a la simulación
   }
 }

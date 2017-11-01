@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 //import { UserService } from '../../services/user.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ConsumeRestAPIService } from '../../services/consume-rest-api.service';
+import { MatSnackBar } from '@angular/material';
 
 
 @Component({
@@ -28,7 +29,8 @@ export class SessionsComponent implements OnInit {
 
   constructor(
     private _consumeRestAPIService: ConsumeRestAPIService,
-    private _router: Router
+    private _router: Router,
+    public snackBar: MatSnackBar
   ) { }
 
   ngOnInit() {
@@ -44,7 +46,7 @@ export class SessionsComponent implements OnInit {
 
   ngDoCheck(){
     this.identity = this._consumeRestAPIService.getIdentity();
-    this._consumeRestAPIService.GetRunningSimulation( this.type ).subscribe( response => { this.sessions=response.data; });
+    // this._consumeRestAPIService.GetRunningSimulation( this.type ).subscribe( response => { this.sessions=response.data; });
   }
 
   logout(){

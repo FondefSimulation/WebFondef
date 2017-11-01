@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 // import { UserService } from '../../services/user.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ConsumeRestAPIService } from '../../services/consume-rest-api.service';
-import { Event } from '../../models/user';
+import { Event, Script } from '../../models/user';
 
 
 @Component({
@@ -17,7 +17,8 @@ export class EditComponent implements OnInit {
   public identity;
   public type;
   public cant = 1;
-  public cantEvent = [ new Event( '', '', '', 0, 0, 0, 0, 0 )];
+  public script = new Script( '', 0, '' );
+  public cantEvent = [ new Event( '', '', '', 0, 0, 0, 0, 0, '' )];
 
   constructor(
     private _consumeRestAPIService: ConsumeRestAPIService,
@@ -41,8 +42,17 @@ export class EditComponent implements OnInit {
 
   moreEvents(){
     var newEvent = '' + this.cant;
-    this.cantEvent[newEvent] = new Event(  '', '', '', 0, 0, 0, 0, 0  )
+    this.cantEvent[newEvent] = new Event(  '', '', '', 0, 0, 0, 0, 0, ''  )
     this.cant = this.cant + 1;
+  }
+
+  saveScript(){
+    console.log(this.script)
+  }
+
+  saveList(desc){
+    this.cant[0].desc = desc;
+    console.log(this.cantEvent)
   }
 
 }

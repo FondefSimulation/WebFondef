@@ -14,6 +14,7 @@ import { SimulationComponent } from './components/simulation/simulation.componen
 import { ViewComponent } from './components/view/view.component';
 import { EditComponent } from './components/edit/edit.component';
 import { TestComponent } from './components/test/test.component';
+import { DesingComponent } from './components/desing/desing.component';
 
 
 const APP_ROUTES: Routes = [
@@ -29,6 +30,7 @@ const APP_ROUTES: Routes = [
   { path: 'view', component: ViewComponent },
   { path: 'edit', component: EditComponent },
   { path: 'test', component: TestComponent },
+  { path: 'desing', component: DesingComponent },
   { path: '**', pathMatch: 'full', component: LoginComponent },
 ];
 

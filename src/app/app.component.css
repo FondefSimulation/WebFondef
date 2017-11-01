@@ -1,18 +1,25 @@
-*{
+/**{
   background: #eeeeee;
+}*/
+/*.imgHeader{
+  position: relative;
+  display: block;
+  top: 20px;
+  margin: auto;
+  min-width: 700px;
 }
-
+.containerBody{
+  margin-top: 30px;
+}*/
 .footers{
   font-size: 12px;
 }
-
 .footerholder {
     position: fixed;
     bottom: 0;
     text-align: center;
     width: 100%;
 }
-
 .footer {
     background: none repeat scroll 0 0 #1c313f;
     height: 40px;

@@ -9,6 +9,8 @@ import { AgmCoreModule } from '@agm/core';
 import { SelectModule } from 'angular2-select';
 import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatInputModule } from '@angular/material';
 import { ChartsModule } from 'ng2-charts';
+import { MatSnackBarModule } from '@angular/material';
+
 
 
 //Components
@@ -28,6 +30,7 @@ import { SimulationComponent } from './components/simulation/simulation.componen
 import { ViewComponent } from './components/view/view.component';
 import { EditComponent } from './components/edit/edit.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import { DesingComponent } from './components/desing/desing.component';
 
 
 @NgModule({
@@ -46,7 +49,8 @@ import { LayoutComponent } from './components/layout/layout.component';
     SimulationComponent,
     ViewComponent,
     EditComponent,
-    LayoutComponent
+    LayoutComponent,
+    DesingComponent
   ],
   imports: [
     BrowserModule,
@@ -63,6 +67,7 @@ import { LayoutComponent } from './components/layout/layout.component';
     MatIconModule,
     MatSidenavModule,
     MatInputModule,
+    MatSnackBarModule,
     ChartsModule,
     ROUTINGPROVIDERS,
     APP_ROUTING

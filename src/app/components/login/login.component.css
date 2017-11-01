@@ -1,69 +1,6 @@
-/*.container{
-  width: 25%;
-}*/
-.marks{
-  position:absolute;
-  border-top: 10px solid #0088D8;
-}
-/*.form-control{
-  border-radius: 0px;
-  margin: 12px 3px;
-  height: 40px;
-  font-family: Sans-serif, FontAwesome;
-}*/
-p{
-  text-align: center;
-}
-.logo{
+.container{
+  position: absolute;
   margin: auto;
-  text-align: center;
-  padding-top: 20%;
-}
-.loginbox{
-  margin-top: 5%;
-  padding: 20px;
-  box-shadow: 0 10px 10px -2px rgba(0,0,0,0.12),0 -2px 10px -2px rgba(0,0,0,0.12);
-}
-.singtext{
-  font-size: 28px;
-  color: #0088D8;
-  font-weight: 500;
-  letter-spacing: 1px;
-}
-.submitButton{
-  background-color: #0088D8;
-  color: #fff;
-  margin-top: 12px;
-  margin-bottom: 10px;
-  padding: 10px 0px;
-  width: 100%;
-  margin-left: 2px;
-  font-size: 16px;
-  border-radius: 0px;
-  outline: none;
-}
-
-
-/*@import "//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css";
-@import "//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700";*/
-/* -- box model ------------------------------------- */
-*,
-*:after,
-*:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-/* -- main styles ------------------------------------- */
-body {
-  font-family: 'Open Sans', sans-serif;
-  background: #0088D8 url("") no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-position: center;
-  /* Internet Explorer 7/8 */
 }
 #enter-footer {
   max-width: 300px;
@@ -72,6 +9,7 @@ body {
   margin-bottom: auto;
   margin-top: -60px;
   font-size: 13px;
+  text-align: center;
 }
 #enter {
   max-width: 400px;
@@ -148,44 +86,6 @@ label {
 #enter form input[type="password"]:invalid {
   outline-color: #0088D8;
 }
-/* -- checkbox styles ----------------------------------- */
-#enter input[type="checkbox"] {
-  -webkit-appearance: none;
-  width: 30px;
-  height: 30px;
-  position: relative;
-  outline: medium none;
-  margin-right: 10px;
-  border-radius: 50%;
-}
-#enter input[type="checkbox"]::before {
-  width: 28px;
-  height: 28px;
-  content: "";
-  display: block;
-  border: 2px solid #0088D8;
-  border-radius: 50%;
-  position: absolute;
-}
-#enter input[type="checkbox"]:checked::before {
-  border-color: #0088D8;
-}
-#enter input[type="checkbox"]:checked::after {
-  width: 14px;
-  height: 14px;
-  content: "";
-  display: block;
-  background: #0088D8;
-  border-radius: 50%;
-  position: absolute;
-  left: 7px;
-  top: 7px;
-}
-#form-login-remember label {
-  vertical-align: top;
-  line-height: 36px;
-  margin-bottom: 0;
-}
 /* -- button styles ----------------------------------- */
 .btn-ok {
   color: #e9ecee;
@@ -199,41 +99,4 @@ label {
   color: #e9ecee;
   background-color: #3e4d59;
   border-color: #3e4d59;
-}
-.btn-ok:active,
-.btn-ok.active {
-  background-image: none;
-}
-.btn-ok.disabled,
-.btn-ok[disabled],
-fieldset[disabled] .btn-ok,
-.btn-ok.disabled:hover,
-.btn-ok[disabled]:hover,
-fieldset[disabled] .btn-ok:hover,
-.btn-ok.disabled:focus,
-.btn-ok[disabled]:focus,
-fieldset[disabled] .btn-ok:focus,
-.btn-ok.disabled:active,
-.btn-ok[disabled]:active,
-fieldset[disabled] .btn-ok:active,
-.btn-ok.disabled.active,
-.btn-ok[disabled].active,
-fieldset[disabled] .btn-ok.active {
-  background-color: #428bca;
-  border-color: #357ebd;
-}
-/* -- placeholder styles ----------------------------------- */
-#enter form ::-webkit-input-placeholder {
-  /* for webkit browsers */
-  text-align: center;
-  color: #555555;
-}
-#enter form :-moz-placeholder {
-  /* for mozilla browsers */
-  text-align: center;
-  color: #555555;
-}
-#enter form .placeholder {
-  text-align: center;
-  color: #555555;
 }

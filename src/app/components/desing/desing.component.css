@@ -1,0 +1,27 @@
+.navbar{
+  position: relative;
+  top: 275px;
+  margin: auto;
+  max-width: 800px;
+  -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+  -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+
+.logout button, input[type="submit"], input[type="reset"] {
+    background: none !important;
+    color: black;
+    border: none;
+    padding: 0! important;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit !important;
+}
+.logout button:hover{
+  color: black;
+}
+
+.body{
+  position: relative;
+  top: 260px;
+}

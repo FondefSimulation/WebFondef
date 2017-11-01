@@ -28,6 +28,15 @@ export class Event{
     public time: number,
     public probability: number,
     public depEvents: number,
-    public depAct: number
+    public depAct: number,
+    public desc: string
+  ){}
+}
+
+export class Script{
+  constructor(
+    public name: string,
+    public time: number,
+    public stage: string
   ){}
 }
