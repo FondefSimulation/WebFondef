@@ -18,7 +18,13 @@
   cursor: pointer;
 }
 .main-container{
-  margin-top: 20px;
+  margin-top: 40px;
+  -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+  -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  padding: 15px;
+  background: white;
+  margin-bottom: 20px;
 }
 .table button{
   border: none;

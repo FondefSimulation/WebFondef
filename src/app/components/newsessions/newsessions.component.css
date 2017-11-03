@@ -14,8 +14,9 @@
   font-size: 18px;
 }
 .main-container{
-  margin-top: 20px;
+  margin-top: 40px;
   width: 60%;
+  margin-bottom: 20px;
 }
 .form-container{
   position: relative;

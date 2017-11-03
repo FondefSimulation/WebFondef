@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 //import { UserService } from '../../services/user.service';
-import { Router, ActivatedRoute, NavigationCancel } from '@angular/router';
+import { Router, ActivatedRoute, NavigationCancel, ActivatedRouteSnapshot } from '@angular/router';
 import { ConsumeRestAPIService } from '../../services/consume-rest-api.service';
 import { URLSearchParams } from '@angular/http';
 
@@ -15,10 +15,12 @@ export class SimulationComponent implements OnInit {
   public identity;
   public type;
   private idSimulation;
+  public latitudeMark: number;
+  public longitudeMark: number;
   // public start:boolean = false;
 
-  lat: number = -38.735222;
-  lng: number = -72.586267;
+  public lat: number = -38.735222;
+  public lng: number = -72.586267;
 
   constructor(
     private _consumeRestAPIService: ConsumeRestAPIService,
@@ -26,18 +28,17 @@ export class SimulationComponent implements OnInit {
     private _router: Router,
     @Inject('Window') window: Window
   ) {
-    this.idSimulation = _router.parseUrl(_router.url).queryParams["idSimulation"];
+    this.idSimulation = _activateRouter.snapshot.paramMap.get('idSimulation')
    }
 
   ngOnInit() {
     this.identity = this._consumeRestAPIService.getIdentity();
     this.type = this._consumeRestAPIService.getType();
-    // if( this.start ){
-    //   window["gameInstance"] = window["UnityLoader"].instantiate("gameContainer", "./Build/TestUJS.json", {onProgress: window["UnityProgress"]});
-    //   window["GetFullTxt"] = function(){
-    //     window["gameInstance"].SendMessage("Capsule", "SetFullTxt", new Date().toString());
-    //   };
-    // }
+    if (this.idSimulation >= 0) {
+        console.log('Id Correcto')
+    }else{
+      this._router.navigate([ '/sessions' ]);
+    }
   }
 
   startSimulation(){
@@ -47,15 +48,6 @@ export class SimulationComponent implements OnInit {
     };
     document.getElementById( "start" ).hidden = true;
     this._consumeRestAPIService.StartSimulation( this.idSimulation ).subscribe( result => console.log( result ) );
-
-  }
-
-  cylinder(){
-    window["gameInstance"].SendMessage("Capsule", "SetUnity3DC", "3");
-  }
-
-  sphere(){
-    window["gameInstance"].SendMessage("Capsule", "SetUnity3DS", "2");
   }
 
   ngDoCheck(){
@@ -66,6 +58,12 @@ export class SimulationComponent implements OnInit {
     localStorage.clear();
     this.identity = null;
     this._router.navigate([ '/' ]);
+  }
+
+  placeMarker( $event, data){
+    this.latitudeMark = $event.coords.lat;
+    this.longitudeMark = $event.coords.lng;
+
   }
 
   open(evt, Name) {

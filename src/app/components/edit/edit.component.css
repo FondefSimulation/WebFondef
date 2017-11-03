@@ -25,7 +25,7 @@ a{
   font-size: 18px;
 }
 .container{
-  margin-top: 15px;
+  margin-top: 40px;
   margin-bottom: 15px;
 }
 .logout button, input[type="submit"]{
@@ -50,7 +50,6 @@ a{
 }
 .map{
   height: 66.6%;
-  background-color: red;
   float: right;
   width: 33.5%;
   height: 360px;
@@ -97,4 +96,7 @@ div.tab button.active {
 textarea {
     resize: none;
     width: 100%;
+}
+agm-map {
+  height: 360px;
 }

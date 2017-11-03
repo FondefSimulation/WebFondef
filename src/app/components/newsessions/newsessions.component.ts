@@ -43,8 +43,8 @@ export class NewsessionsComponent implements OnInit {
   }
 
   saveSession(){
-    console.log(this.data)
-    //
+    console.log(this.session)
+    this.session.scriptSession = 'G10min';
     this._consumeRestAPIService.CreateSessionSimulation( this.session ).subscribe();
     // this._router.navigate([ '/sessions' ]);
     // recive la id y pasa a la simulación

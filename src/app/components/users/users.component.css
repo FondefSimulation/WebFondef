@@ -10,30 +10,33 @@
 .btn{
   cursor: pointer;
 }
-
-.fa-sign-out{
-  font-size: 18px;
+.fa-pencil{
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 17px;
 }
-.fa-sign-in{
+.fa-times{
   font-size: 24px;
   cursor: pointer;
 }
-.fa-trash-o{
+.fa-plus-circle{
   font-size: 24px;
   cursor: pointer;
 }
 .main-container{
   margin-top: 40px;
-  width: 60%;
-  margin-bottom: 20px;
-}
-.form-container{
   position: relative;
   -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
   -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
   padding: 15px;
   background: white;
+  margin-bottom: 20px;
+  max-width: 800px;
+}
+.table button{
+  border: none;
+  background: none;
 }
 .newSesion button, input[type="submit"], input[type="reset"] {
     background: none !important;

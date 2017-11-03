@@ -24,7 +24,10 @@ export class Event{
     public event: string,
     public type: string,
     public identifier: string,
-    public value: number,
+    public values: {
+      longitude: number,
+      latitude: number
+    },
     public time: number,
     public probability: number,
     public depEvents: number,

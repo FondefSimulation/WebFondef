@@ -4,13 +4,16 @@
     <div class="">
 
       <div class="map">
-        Plugin google map
+        <agm-map [latitude]="lat" [longitude]="lng" (mapClick)="placeMarker($event)">
+          <agm-marker [latitude]="latitudeMark" [longitude]="longitudeMark"></agm-marker>
+        </agm-map>
       </div>
 
       <div class="panel">
 
-        <h1>Nuevo Guion</h1>
         <div class="form-container">
+          <h1>Nuevo Guion</h1>
+          <hr>
           <form (ngSubmit)="saveScript()">
             <div class="form-group row">
               <label class="col-sm-4 col-form-label">Nombre del Guion</label>
@@ -50,8 +53,9 @@
   </div>
 
   <div class="container">
-    <h1>Eventos</h1>
     <div class="form-container">
+      <h1>Eventos</h1>
+      <hr>
         <div class="table-responsive">
           <table class="table">
             <thead class="thead-inverse">
@@ -160,6 +164,6 @@
     </div>
 
   </div>
-<br>
+  <app-footer></app-footer>
+
 </div>
-<br>

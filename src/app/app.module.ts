@@ -31,6 +31,8 @@ import { ViewComponent } from './components/view/view.component';
 import { EditComponent } from './components/edit/edit.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { DesingComponent } from './components/desing/desing.component';
+import { UsersComponent } from './components/users/users.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -50,7 +52,9 @@ import { DesingComponent } from './components/desing/desing.component';
     ViewComponent,
     EditComponent,
     LayoutComponent,
-    DesingComponent
+    DesingComponent,
+    UsersComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

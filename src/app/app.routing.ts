@@ -15,6 +15,7 @@ import { ViewComponent } from './components/view/view.component';
 import { EditComponent } from './components/edit/edit.component';
 import { TestComponent } from './components/test/test.component';
 import { DesingComponent } from './components/desing/desing.component';
+import { UsersComponent } from './components/users/users.component';
 
 
 const APP_ROUTES: Routes = [
@@ -26,12 +27,13 @@ const APP_ROUTES: Routes = [
   { path: 'scripts', component: ScriptsComponent },
   { path: 'condition', component: ConditionComponent },
   { path: 'results', component: ResultsComponent },
-  { path: 'simulation', component: SimulationComponent },
+  { path: 'simulation/:idSimulation', component: SimulationComponent },
   { path: 'view', component: ViewComponent },
   { path: 'edit', component: EditComponent },
   { path: 'test', component: TestComponent },
   { path: 'desing', component: DesingComponent },
-  { path: '**', pathMatch: 'full', component: LoginComponent },
+  { path: 'users', component: UsersComponent },
+  { path: '**', pathMatch: 'full', component: HomeComponent },
 ];
 
 export const ROUTINGPROVIDERS: any[] = [];
