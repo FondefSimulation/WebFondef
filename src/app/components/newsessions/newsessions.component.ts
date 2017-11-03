@@ -42,7 +42,7 @@ export class NewsessionsComponent implements OnInit {
     this._router.navigate([ '/' ]);
   }
 
-  saveSession(){
+  onSubmit(){
     console.log(this.session)
     this.session.scriptSession = 'G10min';
     this._consumeRestAPIService.CreateSessionSimulation( this.session ).subscribe();
