@@ -28,12 +28,13 @@ export class SimulationComponent implements OnInit {
     private _router: Router,
     @Inject('Window') window: Window
   ) {
-    this.idSimulation = _activateRouter.snapshot.paramMap.get('idSimulation')
+    // this.idSimulation = _activateRouter.snapshot.paramMap.get('idSimulation')
    }
 
   ngOnInit() {
     this.identity = this._consumeRestAPIService.getIdentity();
     this.type = this._consumeRestAPIService.getType();
+    this.idSimulation = this._consumeRestAPIService.getSimuId();
     if (this.idSimulation >= 0) {
         console.log('Id Correcto')
     }else{

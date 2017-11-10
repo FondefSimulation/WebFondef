@@ -34,6 +34,7 @@ export class ConsumeRestAPIService{
     public indetity;
     public token;
     public type;
+    public simu;
 
     constructor(
       private _http: Http
@@ -49,7 +50,7 @@ export class ConsumeRestAPIService{
       //let params = JSON.stringify( user_to_login );
       let params = JSON.stringify({ "Username": user_to_login.name, "Password": user_to_login.password });
       let headers = new Headers({ 'Content-Type': 'application/json' });
-      
+
       return this._http.put( this.url + 'TokenAuth/Login/', params, { headers:headers } )
                        .map( res => res.json() );
 
@@ -67,7 +68,7 @@ export class ConsumeRestAPIService{
     GetRunningSimulation( disaster ){
       let params = JSON.stringify({ "sessionType": disaster });
       let headers = new Headers({ 'Content-Type': 'application/json' });
-      
+
       return  this._http.post( this.url + 'SimAPI/GetRunningSimulations/', params, { headers:headers } )
                         .map( res=> res.json());
       //recive idSession, nameSession
@@ -118,13 +119,24 @@ export class ConsumeRestAPIService{
 
     getType(){
       let type = localStorage.getItem( 'type' );
-     
+
       if ( type != 'undefined' ) {
         this.type = type;
       }else{
         this.type = null;
       }
       return this.type;
+    }
+
+    getSimuId(){
+      let simu = localStorage.getItem( 'simulationOn' );
+
+      if ( simu != 'undefined' ) {
+        this.simu = simu;
+      }else{
+        this.simu = null;
+      }
+      return this.simu;
     }
 
   }

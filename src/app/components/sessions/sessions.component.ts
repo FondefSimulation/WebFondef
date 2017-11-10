@@ -16,6 +16,7 @@ export class SessionsComponent implements OnInit {
 
   public identity;
   public type;
+  public simulationOn;
   /*sessions = [
     { id: 0, nameSession: "Session 00"},
     { id: 1, nameSession: "Session 01"},
@@ -36,6 +37,7 @@ export class SessionsComponent implements OnInit {
   ngOnInit() {
     this.identity = this._consumeRestAPIService.getIdentity();
     this.type = this._consumeRestAPIService.getType();
+    this.simulationOn = this._consumeRestAPIService.getSimuId();
     //GetRunningSimulation
 
     //this._consumeRestAPIService.GetRunningSimulation( this.type ).subscribe( data => this.sessions = data );
@@ -55,8 +57,11 @@ export class SessionsComponent implements OnInit {
     this._router.navigate([ '/' ]);
   }
 
-  Simulation(id){
-    this._router.navigate([ '/simulation/' +  this.sessions[id].id]);
+  Simulation(idS){
+    this.simulationOn = this.sessions[idS].id;
+    console.log(this.simulationOn)
+    localStorage.setItem( 'simulationOn', JSON.stringify( this.simulationOn ) );
+    this._router.navigate([ '/simulation' ]);
     //this._consumeRestAPIService.JoinSimulation( id ).subscribe( result => console.log( result ) );
   }
 

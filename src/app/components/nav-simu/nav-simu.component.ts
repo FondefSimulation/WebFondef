@@ -3,11 +3,11 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { ConsumeRestAPIService } from '../../services/consume-rest-api.service';
 
 @Component({
-  selector: 'app-desing',
-  templateUrl: './desing.component.html',
-  styleUrls: ['./desing.component.css']
+  selector: 'app-nav-simu',
+  templateUrl: './nav-simu.component.html',
+  styleUrls: ['./nav-simu.component.css']
 })
-export class DesingComponent implements OnInit {
+export class NavSimuComponent implements OnInit {
 
   public identity;
   public type;

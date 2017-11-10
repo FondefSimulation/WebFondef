@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
 .footers{
+  font-family: 'Roboto', sans-serif;
   font-size: 12px;
+  font-weight: 100px;
+  color: white;
 }
 .footerholder {
-  
+
     position: fixed;
     bottom: 0;
     text-align: center;

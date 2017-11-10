@@ -33,6 +33,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { DesingComponent } from './components/desing/desing.component';
 import { UsersComponent } from './components/users/users.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { NavSimuComponent } from './components/nav-simu/nav-simu.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { FooterComponent } from './components/footer/footer.component';
     LayoutComponent,
     DesingComponent,
     UsersComponent,
-    FooterComponent
+    FooterComponent,
+    NavSimuComponent
   ],
   imports: [
     BrowserModule,

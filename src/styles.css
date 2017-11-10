@@ -1,8 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
-body{
-  background-color: white;
+@import url('https://fonts.googleapis.com/css?family=Roboto:500');
+
+*{
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+
+
 }
-.header{
-  height: 300px;
-  background-color: #1c313f;
+
+body{
+  background: #eaeaea;
 }
