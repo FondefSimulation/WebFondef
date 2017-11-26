@@ -14,7 +14,7 @@
 .fa-sign-out{
   font-size: 18px;
 }
-.fa-sign-in{
+.fa-pencil-square-o{
   font-size: 24px;
   cursor: pointer;
 }
@@ -37,22 +37,26 @@
 }
 .newSesion button, input[type="submit"], input[type="reset"] {
     background: none !important;
-    color: inherit;
+    color: #777;
     border: none;
     padding: 0! important;
     font: inherit;
     cursor: pointer;
     outline: inherit !important;
+    font-weight: 400;
 }
-.logout button, input[type="submit"], input[type="reset"] {
-    background: none !important;
-    color: inherit;
-    border: none;
-    padding: 0! important;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit !important;
+.title{
+  color: #5A738E;
+  font-weight: 200;
 }
-.logout button:hover{
-  color: black;
+
+.titleTable{
+  font-weight: 200 !important;
+  color: white !important;
+  background: rgba(52,73,94,.94) !important;
+}
+
+.table{
+  color: #5A738E;
+  font-weight: 400;
 }

@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
 
     this._consumeRestAPIService.signup(this.user).subscribe(
       response => {
-        this.errorMsg = response.msg;
+        this.errorMsg = 'Usuario o Contraseña incorrectos';
         this.identity = response.userInfo;
         this.token = response.data;
 

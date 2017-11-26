@@ -14,7 +14,8 @@
     width: 100%;
 }
 .footer {
-    background: #1c313f;
+    /*background: #1c313f;*/
+    background: linear-gradient(#334556,#2C4257),#2A3F54;
     height: 40px;
     margin: auto;
 }

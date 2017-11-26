@@ -10,6 +10,8 @@ import { SelectModule } from 'angular2-select';
 import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatInputModule } from '@angular/material';
 import { ChartsModule } from 'ng2-charts';
 import { MatSnackBarModule } from '@angular/material';
+import { DataTableModule, SharedModule } from 'primeng/primeng';
+
 
 
 
@@ -75,6 +77,8 @@ import { NavSimuComponent } from './components/nav-simu/nav-simu.component';
     MatInputModule,
     MatSnackBarModule,
     ChartsModule,
+    // DataTableModule,
+    // SharedModule,
     ROUTINGPROVIDERS,
     APP_ROUTING
   ],

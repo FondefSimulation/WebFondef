@@ -1,60 +1,56 @@
 <div *ngIf="identity">
   <div class="fixed">
-    <nav class="navbar navbar-light navfull">
-      <span class="navbar-brand mb-0 h1">Simulador basado en video juego para respuesta a desastres</span>
+    <!-- <nav class="navbar navbar-light navfull">
+      <img src="/assets/img/logo-main.png" width="6%" height="6%" alt="">
+      <a class="title navbar-brand">Simulador basado en video juego para respuesta a desastres</a>
+    </nav> -->
+    <nav class="navbar navfull">
+      <a class="navbar-brand title" href="#">
+        <img src="/assets/img/logo-main.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Simulador basado en video juego para respuesta a desastres
+      </a>
     </nav>
-    <nav class="navbar navbar-expand-lg navbar-light navMid">
-      <a class="navbar-brand" >Perfil: {{ identity.role }}</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg  navMid">
+      <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
 
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item name" routerLinkActive="active" *ngIf="type">
-            <a class="nav-link" [routerLink]="['../home']">Desastres</a>
+          <li class="nav-item name" routerLinkActive="active" routerLinkActive="router-link-active" *ngIf="type">
+            <a class="nav-link" [routerLink]="['../home']"><i class="fa fa-home" aria-hidden="true"></i> Inicio</a>
           </li>
-          <li class="nav-item name" routerLinkActive="active" *ngIf="type">
-            <a class="nav-link" [routerLink]="['../sessions']"><i class="fa fa-th-list" aria-hidden="true"></i> Sesiones</a>
+          <li class="nav-item name" routerLinkActive="active" routerLinkActive="router-link-active" *ngIf="type">
+            <a class="nav-link" [routerLink]="['../sessions']"><i class="fa fa-sign-in" aria-hidden="true"></i> Sesiones</a>
           </li>
-          <li class="nav-item name" routerLinkActive="active" *ngIf="type">
-            <a class="nav-link" [routerLink]="['../condition']"> Condiciones</a>
+          <li class="nav-item name" routerLinkActive="active" routerLinkActive="router-link-active" *ngIf="type">
+            <a class="nav-link" [routerLink]="['../condition']"><i class="fa fa-th-list" aria-hidden="true"></i> Condiciones</a>
           </li>
-          <li class="nav-item name" routerLinkActive="active" *ngIf="type">
+          <li class="nav-item name" routerLinkActive="active" routerLinkActive="router-link-active" *ngIf="type">
             <a class="nav-link" [routerLink]="['../scripts']"><i class="fa fa-file-text-o" aria-hidden="true"></i> Guiones</a>
           </li>
-          <li class="nav-item name" routerLinkActive="active" *ngIf="type">
+          <li class="nav-item name" routerLinkActive="active" routerLinkActive="router-link-active" *ngIf="type">
             <a class="nav-link" [routerLink]="['../results']"><i class="fa fa-area-chart" aria-hidden="true"></i> Resultados</a>
           </li>
-          <li class="nav-item name" routerLinkActive="active" *ngIf="type">
-            <a class="nav-link" [routerLink]="['../users']"><i class="fa fa-user" aria-hidden="true"></i> Usuarios</a>
+          <li class="nav-item name" routerLinkActive="active" routerLinkActive="router-link-active" *ngIf="type">
+            <a class="nav-link" [routerLink]="['../users']"><i class="fa fa-users" aria-hidden="true"></i> Usuarios</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <div class="logout">
-            <button class="my-2 my-sm-0" type="button" name="button" data-toggle="modal" data-target="#logout"><i class="fa fa fa-sign-out" aria-hidden="true"></i>Salir</button>
-          </div>
+          <a class="navbar-brand perfil" >
+            <div class="dropdown">
+              <button class="perfil dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-user" aria-hidden="true"></i> Perfil: {{ identity.role }}
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <button class="my-2 my-sm-0 salir" type="button" name="button" (click)="logout()"><i class="fa fa fa-sign-out" aria-hidden="true"></i> Salir</button>
+              </div>
+            </div>
+          </a>
         </form>
 
         <!-- Modal -->
-        <div class="modal" id="logout" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content" style="color: black;">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Cerrar Sesión</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                ¿Esta seguro que quiere cerrar sesion?
-              </div>
-              <div class="modal-footer">
-                <button type="button" (click)="logout()" data-dismiss="modal" class="btn btn-primary">Si</button>
-              </div>
-            </div>
-          </div>
-        </div>
+
 
       </div>
     </nav>

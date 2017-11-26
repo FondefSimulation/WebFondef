@@ -1,9 +1,13 @@
+*{
+  font-weight: 200;
+
+}
 .navfull{
   position: relative;
   top: 0px;
   z-index: 1;
-  background-color: #eeeeee;
-  color: black;
+  /*background-color: #eeeeee;*/
+  background-color: #172D44;
 }
 .navMid{
   position: relative;
@@ -11,8 +15,18 @@
   -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, .5);
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, .25);
   z-index: 1;
-  background-colro: #ffffff;
-  color: black;
+  /*background-color: #ffffff;*/
+  background-color: #EDEDED;
+  /*color: black !important;*/
+}
+.nav-link{
+  color: #23527c !important;
+}
+.nav-link:hover{
+  background-color: #1c313f6e;
+}
+.router-link-active{
+  background-color: #1c313f6e;
 }
 .fixed{
   position: fixed;
@@ -23,22 +37,29 @@
   background-color: #eeeeee;
 }
 
-.logout button, input[type="submit"], input[type="reset"] {
+.perfil button, input[type="submit"], input[type="reset"] {
     background: none !important;
     color: black;
     border: none;
+    cursor: pointer;
+    outline: inherit !important;
+}
+.perfil{
+  color: #23527c !important;
+}
+.logout button, input[type="submit"], input[type="reset"] {
+    background: none !important;
+    border: none;
+    color: #23527c !important;
     padding: 0! important;
     font: inherit;
     cursor: pointer;
     outline: inherit !important;
 }
-.logout button:hover{
-  color: black;
-}
 
 .body{
   position: relative;
-  top: 100px;
+  top: 120px;
 }
 
 .loginB{
@@ -47,4 +68,29 @@
   height: 300px;
   width: auto;
   background-color: #1c313f;
+}
+
+.title{
+  /*position: relative;
+  right: 37%;*/
+  font-size: 20px;
+  color: white !important;
+}
+.perfil{
+  font-size: 14px;
+}
+.dropdown-menu{
+  /*margin-top: 10px;*/
+  border-radius: 0;
+  border: none;
+  -moz-box-shadow: 0px 0px 0px rgba(0, 0, 0,0.5);
+  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, .5);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, .25);
+}
+.salir{
+  color: #23527c !important;
+  background: #172D44 !important;
+}
+.salir:hover{
+  background: #1c313f6e;
 }

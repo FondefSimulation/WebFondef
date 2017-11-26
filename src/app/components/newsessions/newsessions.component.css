@@ -15,7 +15,7 @@
 }
 .main-container{
   margin-top: 40px;
-  width: 60%;
+  width: 35%;
   margin-bottom: 60px;
 }
 .form-container{
@@ -25,16 +25,12 @@
   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
   padding: 15px;
   background: white;
+  color: #5A738E;
+  font-weight: 400 !important;
+  min-width: 200px;
+  margin: auto;
 }
-.logout button, input[type="submit"], input[type="reset"] {
-    background: none !important;
-    color: inherit;
-    border: none;
-    padding: 0! important;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit !important;
-}
-.logout button:hover{
-  color: black;
+.title{
+  color: #5A738E;
+  font-weight: 200;
 }

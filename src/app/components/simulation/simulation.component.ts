@@ -35,10 +35,11 @@ export class SimulationComponent implements OnInit {
     this.identity = this._consumeRestAPIService.getIdentity();
     this.type = this._consumeRestAPIService.getType();
     this.idSimulation = this._consumeRestAPIService.getSimuId();
-    if (this.idSimulation >= 0) {
-        console.log('Id Correcto')
-    }else{
+    console.log(this.idSimulation)
+    if (this.idSimulation == null) {
       this._router.navigate([ '/sessions' ]);
+    }else{
+      console.log('id Correcto')
     }
   }
 

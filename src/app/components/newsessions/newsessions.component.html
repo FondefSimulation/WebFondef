@@ -2,19 +2,19 @@
 
   <div class="container main-container">
     <div class="form-container">
-      <h1>Nueva Sesion</h1>
+      <h1 class="title">Nueva Sesion</h1>
       <hr>
       <form sessionForm="ngForm"  (ngSubmit)="onSubmit()">
         <div class="form-group row">
-          <label class="col-sm-4 col-form-label">Nombre de la sesión</label>
-          <div class="col-sm-8">
+          <label class="col-sm-5 col-form-label">Nombre de la sesión</label>
+          <div class="col-sm-6">
             <input type="text" class="form-control" required name="name" #name="ngModel"
             [(ngModel)]="session.nameSession" />
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-sm-4 col-form-label">Guion</label>
-          <div class="col-sm-8">
+          <label class="col-sm-5 col-form-label">Guion</label>
+          <div class="col-sm-6">
             <select class="custom-select mr-sm-8" required name="script" #script="ngModel"
             [(ngModel)]="session.scriptSession">
               <option selected>- Ninguno -</option>
@@ -25,8 +25,8 @@
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-sm-4 col-form-label">Escenario</label>
-          <div class="col-sm-8">
+          <label class="col-sm-5 col-form-label">Escenario</label>
+          <div class="col-sm-6">
             <select class="custom-select mr-sm-8" required name="stage" #stage="ngModel"
             [(ngModel)]="session.stage">
               <option selected>- Ninguno -</option>
@@ -37,8 +37,8 @@
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-sm-4 col-form-label">Perfil</label>
-          <div class="col-sm-8">
+          <label class="col-sm-5 col-form-label">Perfil</label>
+          <div class="col-sm-6">
             <select class="custom-select mr-sm-8" required name="profile" #profile="ngModel"
             [(ngModel)]="session.profileSession">
               <option selected>- Ninguno -</option>
@@ -49,8 +49,8 @@
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-sm-4 col-form-label">Efecto cascada</label>
-          <div class="col-sm-8">
+          <label class="col-sm-5 col-form-label">Efecto cascada</label>
+          <div class="col-sm-6">
             <input type="text" class="form-control" required placeholder="0" name="cascadeEffect" #cascadeEffect="ngModel"
             [(ngModel)]="session.cascadeEffectSession">
           </div>

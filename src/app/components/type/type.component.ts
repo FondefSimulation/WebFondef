@@ -31,7 +31,7 @@ export class TypeComponent implements OnInit {
 
   ngOnInit() {
     this.identity = this._consumeRestAPIService.getIdentity();
-    document.getElementById( 'tD' ).hidden = true;
+    // document.getElementById( 'tD' ).hidden = true;
     //añadir metodo getTypeDisaster
     //this._consumeRestAPIService.GetTypeDisaster().subscribe( data => { this.disasters = data.data['disasters'] });
     this._consumeRestAPIService.GetTypeDisaster().subscribe( response => { this.disasters=response.data; });
@@ -47,16 +47,16 @@ export class TypeComponent implements OnInit {
     this._router.navigate([ '/' ]);
   }
 
-  @ViewChild('typeDisaster') typeDisaster;
+  // @ViewChild('typeDisaster') typeDisaster;
+  //
+  // showDisaster(){
+  //   var disaster = this.typeDisaster.nativeElement.value;
+  //   this.nameDisaster = this.disasters[ disaster - 1 ].name;
+  //   document.getElementById( 'tD' ).hidden = false;
+  // }
 
-  showDisaster(){
-    var disaster = this.typeDisaster.nativeElement.value;
-    this.nameDisaster = this.disasters[ disaster - 1 ].name;
-    document.getElementById( 'tD' ).hidden = false;
-  }
-
-  getType(){
-    var disaster = this.typeDisaster.nativeElement.value;
+  getType(disaster){
+    // var disaster = this.typeDisaster.nativeElement.value;
     if ( disaster == 1 ) {
       localStorage.setItem( 'type', 'incendio' );
       this._router.navigate([ '/sessions' ]);

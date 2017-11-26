@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.identity = this._consumeRestAPIService.getIdentity();
     this.type = this._consumeRestAPIService.getType();
-    document.getElementById( 'tD' ).hidden = true;
+    // document.getElementById( 'tD' ).hidden = true;
     this._consumeRestAPIService.GetTypeDisaster().subscribe( response => { this.disasters=response.data; });
   }
 
@@ -41,17 +41,17 @@ export class HomeComponent implements OnInit {
     this._router.navigate([ '/' ]);
   }
 
-  @ViewChild('typeDisaster') typeDisaster;
+  // @ViewChild('typeDisaster') typeDisaster;
 
   showDisaster(){
-    var disaster = this.typeDisaster.nativeElement.value;
-    this.nameDisaster = this.disasters[ disaster - 1 ].name;
-    document.getElementById( 'tD' ).hidden = false;
+    // var disaster = this.typeDisaster.nativeElement.value;
+    // this.nameDisaster = this.disasters[ disaster - 1 ].name;
+    // document.getElementById( 'tD' ).hidden = false;
   }
 
-  getType(){
-    var disaster = this.typeDisaster.nativeElement.value;
-    console.log(disaster)
+  getType(disaster){
+    // var disaster = this.typeDisaster.nativeElement.value;
+    // console.log(disaster)
     if ( disaster == 1 ) {
       localStorage.setItem( 'type', 'incendio' );
       this._router.navigate([ '/sessions' ]);

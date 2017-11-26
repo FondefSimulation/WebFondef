@@ -2,7 +2,7 @@
 
   <div class="container main-container">
     <div class="form-container">
-      <h1>Guiones</h1>
+      <h1 class="title">Guiones</h1>
       <hr>
       <div class="newSesion">
         <button type="button" name="button" [routerLink]="['../edit']"><i class="fa fa-plus-circle" aria-hidden="true"></i> Nuevo Guion</button>
@@ -10,7 +10,7 @@
       <br>
       <div class="table-responsive">
         <table class="table">
-          <thead class="thead-inverse">
+          <thead class="titleTable">
             <tr>
               <th>Nombre de la Sesión</th>
               <th>Guion</th>
@@ -28,7 +28,7 @@
               <td></td>
               <td></td>
               <td></td>
-              <td><i class="fa fa-sign-in" aria-hidden="true" [routerLink]="['../edit']"></i></td>
+              <td><i class="fa fa-pencil-square-o" aria-hidden="true" (click)="editScript()"></i></td>
               <td><i class="fa fa-trash-o" aria-hidden="true" data-toggle="modal" data-target="#delete"></i></td>
             </tr>
             <tr>
@@ -37,7 +37,7 @@
               <td></td>
               <td></td>
               <td></td>
-              <td><i class="fa fa-sign-in" aria-hidden="true" [routerLink]="['../edit']"></i></td>
+              <td><i class="fa fa-pencil-square-o" aria-hidden="true" [routerLink]="['../edit']"></i></td>
               <td><i class="fa fa-trash-o" aria-hidden="true" data-toggle="modal" data-target="#delete"></i></td>
             </tr>
             <tr>
@@ -46,7 +46,7 @@
               <td></td>
               <td></td>
               <td></td>
-              <td><i class="fa fa-sign-in" aria-hidden="true" [routerLink]="['../edit']"></i></td>
+              <td><i class="fa fa-pencil-square-o" aria-hidden="true" [routerLink]="['../edit']"></i></td>
               <td><i class="fa fa-trash-o" aria-hidden="true" data-toggle="modal" data-target="#delete"></i></td>
             </tr>
           </tbody>

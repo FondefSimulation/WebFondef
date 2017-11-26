@@ -42,6 +42,11 @@ input[type="text"]:disabled {
     outline: inherit !important;
 }
 
+.tab{
+  color: #5A738E !important;
+  font-weight: 200 !important;
+}
+
 div.tab {
     overflow: hidden;
     background-color: #f1f1f1;
@@ -74,15 +79,11 @@ div.tab button.active {
   padding: 15px;
   background: white;
 }
-.logout button, input[type="submit"], input[type="reset"] {
-    background: none !important;
-    color: inherit;
-    border: none;
-    padding: 0! important;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit !important;
+.title{
+  color: #5A738E;
+  font-weight: 200;
 }
-.logout button:hover{
-  color: black;
+.sub-title{
+  font-weight: 400 !important;
+  color: #5A738E !important;
 }

@@ -1,16 +1,26 @@
-
 .container{
   /*position: relative;
   height: 300px;
   width: auto;
   background-color: #1c313f;*/
 }
+#enter-header{
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-top: -570px;
+  font-size: 29px !important;
+  text-align: center;
+  color: white;
+}
+
 #enter-footer {
   max-width: 300px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;
-  margin-top: -60px;
+  margin-top: 580px;
   font-size: 13px;
   text-align: center;
 }
@@ -66,11 +76,6 @@ label {
   font-weight: 300;
 }
 /* -- input styles ----------------------------------- */
-#enter form input[type="text"],
-#enter form input[type="password"] {
-  background-color: #d9dde0;
-  color: black;
-}
 #enter form input[type="text"]:hover,
 #enter form input[type="password"]:hover {
   background-color: #ced2d5;
@@ -85,7 +90,7 @@ label {
 }
 #enter form input[type="text"]:valid,
 #enter form input[type="password"]:valid {
-  background-color: #1abc9c;
+  background-color: #ced2d5;
   color: black;
   outline-color: #0088D8;
 }
@@ -106,4 +111,10 @@ label {
   color: #e9ecee;
   background-color: #3e4d59;
   border-color: #3e4d59;
+}
+*{
+  font-family: FontAwesome,sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
 }
