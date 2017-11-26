@@ -61,7 +61,7 @@ export class LoginComponent implements OnInit {
           localStorage.setItem( 'token', this.token );
           this.status = 'success';
 
-          this._router.navigate([ '/type' ]);
+          this._router.navigate([ '/home' ]);
           //Obtener Token
           /*this._userService.signup( this.user, 'true' ).subscribe(
             response => {
