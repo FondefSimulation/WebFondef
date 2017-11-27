@@ -10,8 +10,9 @@ import { SelectModule } from 'angular2-select';
 import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatInputModule } from '@angular/material';
 import { ChartsModule } from 'ng2-charts';
 import { MatSnackBarModule } from '@angular/material';
-import { DataTableModule, SharedModule } from 'primeng/primeng';
-
+import { InputTextModule, ButtonModule, DataTableModule, DialogModule }  from 'primeng/primeng';
+import { CarService } from './services/carservice';
+import { HttpClientModule }    from '@angular/common/http';
 
 
 
@@ -37,6 +38,8 @@ import { UsersComponent } from './components/users/users.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavSimuComponent } from './components/nav-simu/nav-simu.component';
 
+//Servicios
+import { SearchPipe } from './pipes/search.pipes';
 
 @NgModule({
   declarations: [
@@ -58,7 +61,8 @@ import { NavSimuComponent } from './components/nav-simu/nav-simu.component';
     DesingComponent,
     UsersComponent,
     FooterComponent,
-    NavSimuComponent
+    NavSimuComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
@@ -77,13 +81,17 @@ import { NavSimuComponent } from './components/nav-simu/nav-simu.component';
     MatInputModule,
     MatSnackBarModule,
     ChartsModule,
-    // DataTableModule,
-    // SharedModule,
+    DataTableModule,
+    InputTextModule,
+    ButtonModule,
+    DialogModule,
+    HttpClientModule,
     ROUTINGPROVIDERS,
     APP_ROUTING
   ],
   //providers: [{provide: LocationStrategy, useClass: HashLocationStrategy,ConsumeRestAPIService:ConsumeRestAPIService}],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy},ConsumeRestAPIService,
+    CarService,
     { provide: 'Window',  useValue: window } //for unity
   ],
   bootstrap: [AppComponent]
