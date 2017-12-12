@@ -16,11 +16,12 @@ export class UsersComponent implements OnInit {
 
   public identity;
   public type;
+  public busqueda;
   public users = [
-    {'id': 0, 'nombre': 'test1', 'rol': 'admin'},
-    {'id': 1, 'nombre': 'test2', 'rol': 'admin'},
-    {'id': 2, 'nombre': 'test3', 'rol': 'admin'},
-    {'id': 3, 'nombre': 'test4', 'rol': 'admin'}
+    {'id': 0, 'Nombre': 'test1', 'rol': 'admin'},
+    {'id': 1, 'Nombre': 'test2', 'rol': 'admin'},
+    {'id': 2, 'Nombre': 'test3', 'rol': 'admin'},
+    {'id': 3, 'Nombre': 'test4', 'rol': 'admin'}
   ]
 
   constructor(

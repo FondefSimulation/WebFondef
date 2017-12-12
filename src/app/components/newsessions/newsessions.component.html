@@ -28,7 +28,7 @@
           <label class="col-sm-5 col-form-label">Escenario</label>
           <div class="col-sm-6">
             <select class="custom-select mr-sm-8" required name="stage" #stage="ngModel"
-            [(ngModel)]="session.stage">
+            [(ngModel)]="session.stageSession">
               <option selected>- Ninguno -</option>
               <option value="1">Escenario 01</option>
               <option value="2">Escenario 02</option>
@@ -51,8 +51,9 @@
         <div class="form-group row">
           <label class="col-sm-5 col-form-label">Efecto cascada</label>
           <div class="col-sm-6">
-            <input type="text" class="form-control" required placeholder="0" name="cascadeEffect" #cascadeEffect="ngModel"
-            [(ngModel)]="session.cascadeEffectSession">
+            <input type="number" min="0" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null :
+            event.charCode >= 48 && event.charCode <= 57" class="form-control" required placeholder="0"
+            name="cascadeEffect" #cascadeEffect="ngModel"[(ngModel)]="session.cascadeEffectSession">
           </div>
         </div>
         <div class="form-group row">

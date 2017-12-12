@@ -1,15 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, OnInit } from '@angular/core';
 import { HttpModule } from '@angular/http';
-import { FormsModule }  from '@angular/forms';
+import { FormsModule, ReactiveFormsModule }  from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { APP_ROUTING, ROUTINGPROVIDERS } from './app.routing';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AgmCoreModule } from '@agm/core';
 import { SelectModule } from 'angular2-select';
-// import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatInputModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatInputModule, MatSnackBarModule, MatStepperModule, MatStepperIntl } from '@angular/material';
 import { ChartsModule } from 'ng2-charts';
-import { MatSnackBarModule } from '@angular/material';
 import { HttpClientModule }    from '@angular/common/http';
 
 
@@ -28,7 +27,6 @@ import { ConsumeRestAPIService } from './services/consume-rest-api.service';
 import { SimulationComponent } from './components/simulation/simulation.component';
 import { ViewComponent } from './components/view/view.component';
 import { EditComponent } from './components/edit/edit.component';
-import { LayoutComponent } from './components/layout/layout.component';
 import { DesingComponent } from './components/desing/desing.component';
 import { UsersComponent } from './components/users/users.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -50,7 +48,6 @@ import { SearchPipe } from './pipes/search.pipes';
     SimulationComponent,
     ViewComponent,
     EditComponent,
-    LayoutComponent,
     DesingComponent,
     UsersComponent,
     FooterComponent,
@@ -63,22 +60,24 @@ import { SearchPipe } from './pipes/search.pipes';
     }),
     HttpModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
-    // MatButtonModule,
-    // MatCardModule,
-    // MatMenuModule,
-    // MatToolbarModule,
-    // MatIconModule,
-    // MatSidenavModule,
-    // MatInputModule,
+    MatButtonModule,
+    MatCardModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatInputModule,
     MatSnackBarModule,
+    MatStepperModule,
     ChartsModule,
     HttpClientModule,
     ROUTINGPROVIDERS,
     APP_ROUTING
   ],
   //providers: [{provide: LocationStrategy, useClass: HashLocationStrategy,ConsumeRestAPIService:ConsumeRestAPIService}],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy},ConsumeRestAPIService,
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy},ConsumeRestAPIService, MatStepperIntl,
     { provide: 'Window',  useValue: window } //for unity
   ],
   bootstrap: [AppComponent]

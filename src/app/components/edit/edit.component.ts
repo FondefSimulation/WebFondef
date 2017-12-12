@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-// import { UserService } from '../../services/user.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ConsumeRestAPIService } from '../../services/consume-rest-api.service';
 import { Event, Script } from '../../models/user';
@@ -23,10 +23,15 @@ export class EditComponent implements OnInit {
   public cant = 1;
   public script = new Script( '', 0, '' );
   public cantEvent;
+  isLinear = false;
+  firstForm: FormGroup;
+  secondForm: FormGroup;
+  thirdForm: FormGroup;
 
   constructor(
     private _consumeRestAPIService: ConsumeRestAPIService,
-    private _router: Router
+    private _router: Router,
+    private _formBuilder: FormBuilder
   ) {
     this.cantEvent = [new Event( '', '', '', { longitude: 0, latitude: 0}, 0, 0, 0, 0, '' )];
   }
@@ -36,23 +41,31 @@ export class EditComponent implements OnInit {
     this.lng = -72.586267;
     this.identity = this._consumeRestAPIService.getIdentity();
     this.type = this._consumeRestAPIService.getType();
+    this.firstForm = this._formBuilder.group({
+      name: ['', Validators.required],
+      time: ['', Validators.required],
+      stage: ['', Validators.required]
+    });
+    this.secondForm = this._formBuilder.group({
+      event: ['', Validators.required],
+      type: ['', Validators.required],
+      identifier: ['', Validators.required],
+      values: ['', Validators.required],
+      time: ['', Validators.required],
+      probability: ['', Validators.required],
+      depEvents: ['', Validators.required],
+      depAct: ['', Validators.required]
+    });
+    this.thirdForm = this._formBuilder.group({
+      desc: ['', Validators.required]
+    });
   }
 
-  ngDoCheck(){
-    this.identity = this._consumeRestAPIService.getIdentity();
-  }
-
-  logout(){
-    localStorage.clear();
-    this.identity = null;
-    this._router.navigate([ '/' ]);
-  }
-
-  moreEvents(){
-    var newEvent = '' + this.cant;
-    this.cantEvent[newEvent] = new Event(  '', '', '', { longitude: 0, latitude: 0}, 0, 0, 0, 0, ''  )
-    this.cant = this.cant + 1;
-  }
+  // moreEvents(){
+  //   var newEvent = '' + this.cant;
+  //   this.cantEvent[newEvent] = new Event(  '', '', '', { longitude: 0, latitude: 0}, 0, 0, 0, 0, ''  )
+  //   this.cant = this.cant + 1;
+  // }
 
   placeMarker( $event, data){
     this.latitudeMark = $event.coords.lat;
@@ -61,14 +74,18 @@ export class EditComponent implements OnInit {
     this.cantEvent[0].values.longitude = this.longitudeMark;
     console.log(this.cantEvent[0])
   }
-
-  saveScript(){
-    console.log(this.script)
+  test(){
+    console.log(this.firstForm.value)
+    console.log(this.thirdForm.value)
   }
-
-  saveList(desc){
-    this.cant[0].desc = desc;
-    console.log(this.cantEvent)
-  }
+  //
+  // saveScript(){
+  //   console.log(this.script)
+  // }
+  //
+  // saveList(desc){
+  //   this.cant[0].desc = desc;
+  //   console.log(this.cantEvent)
+  // }
 
 }

@@ -23,7 +23,7 @@ export class NewsessionsComponent implements OnInit {
     private _consumeRestAPIService: ConsumeRestAPIService,
     private _router: Router,
   ) {
-    this.session = new Session( '', this._consumeRestAPIService.getType(),'G10min', '', 0 );
+    this.session = new Session( '', this._consumeRestAPIService.getType(),'G10min', '', 0, '' );
   }
 
   ngOnInit() {
@@ -49,4 +49,5 @@ export class NewsessionsComponent implements OnInit {
     // this._router.navigate([ '/sessions' ]);
     // recive la id y pasa a la simulación
   }
+
 }

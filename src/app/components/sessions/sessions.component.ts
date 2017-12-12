@@ -41,7 +41,7 @@ export class SessionsComponent implements OnInit {
     //GetRunningSimulation
 
     //this._consumeRestAPIService.GetRunningSimulation( this.type ).subscribe( data => this.sessions = data );
-    this._consumeRestAPIService.GetRunningSimulation( this.type ).subscribe( response => { this.sessions=response.data; });
+    this._consumeRestAPIService.GetRunningSimulation( this.type ).subscribe( response => { this.sessions=response.data; console.log(this.sessions) });
     //console.log( this.sessions );
 
   }

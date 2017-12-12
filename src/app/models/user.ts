@@ -15,7 +15,8 @@ export class Session{
     public typeSession: string,
     public scriptSession: string,
     public profileSession: string,
-    public cascadeEffectSession: number
+    public cascadeEffectSession: number,
+    public stageSession: string
   ){}
 }
 

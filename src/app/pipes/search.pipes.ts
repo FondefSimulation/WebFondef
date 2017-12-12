@@ -11,7 +11,7 @@ export class SearchPipe implements PipeTransform{
         return items;
     }
     return items.filter(function(item){
-      return item.Simulacion.toLowerCase().includes(term.toLowerCase());
+      return item.Nombre.toLowerCase().includes(term.toLowerCase());
     });
   }
 }
