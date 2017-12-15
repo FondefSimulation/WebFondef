@@ -25,8 +25,7 @@ a{
   font-size: 18px;
 }
 .container{
-  margin-top: -10px;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 .logout button, input[type="submit"]{
     background: none !important;
@@ -119,4 +118,9 @@ input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.ff{
+  margin-top: 50px;
+  width: 400px;
 }

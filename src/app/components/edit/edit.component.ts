@@ -67,12 +67,13 @@ export class EditComponent implements OnInit {
     this.marks[index] = [this.latitudeMark,this.longitudeMark];
     this.cantEvent[0].values.latitude = this.marks[index][0];
     this.cantEvent[0].values.longitude = this.marks[index][1];
-    console.log(this.cantEvent[index])
-    console.log(this.marks)
+    // console.log(this.cantEvent[index])
+    // console.log(this.marks)
   }
 
   test(){
     console.log(this.firstForm.value)
+    console.log(this.cantEvent)
     console.log(this.thirdForm.value)
   }
   //
