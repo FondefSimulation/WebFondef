@@ -61,11 +61,11 @@ export class EditComponent implements OnInit {
     });
   }
 
-  // moreEvents(){
-  //   var newEvent = '' + this.cant;
-  //   this.cantEvent[newEvent] = new Event(  '', '', '', { longitude: 0, latitude: 0}, 0, 0, 0, 0, ''  )
-  //   this.cant = this.cant + 1;
-  // }
+  moreEvents(){
+    var newEvent = '' + this.cant;
+    this.cantEvent[newEvent] = new Event(  '', '', '', { longitude: 0, latitude: 0}, 0, 0, 0, 0, ''  )
+    this.cant = this.cant + 1;
+  }
 
   placeMarker( $event, data){
     this.latitudeMark = $event.coords.lat;

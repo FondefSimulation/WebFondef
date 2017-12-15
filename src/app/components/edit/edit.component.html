@@ -205,7 +205,6 @@
     </mat-step>
 
     <mat-step [stepControl]="secondForm">
-      <!-- <form [formGroup]="firstForm"> -->
 
         <ng-template matStepLabel>Agregar Eventos</ng-template>
 
@@ -232,7 +231,7 @@
               <tr>
                 <th>
                   <div class="col-sm-12">
-                    <select class="custom-select mr-sm-8" id="ev" name="ev" #ev="ngModel" [(ngModel)]=" this.cantEvent[0].event ">
+                    <select class="custom-select mr-sm-8" id="ev" name="ev" #ev="ngModel" [(ngModel)]=" this.cantEvent[i].event ">
                       <option selected>- Seleccionar -</option>
                       <option value="1">Seleccion 01</option>
                       <option value="2">Seleccion 02</option>
@@ -243,21 +242,21 @@
                 <th>
                   <div class="form-group row">
                     <div class="col-sm-12">
-                      <input type="text" class="form-control" id="type" name="type" #type="ngModel" [(ngModel)]="this.cantEvent[0].type">
+                      <input type="text" class="form-control" id="type" name="type" #type="ngModel" [(ngModel)]="this.cantEvent[i].type">
                     </div>
                   </div>
                 </th>
                 <th>
                   <div class="form-group row">
                     <div class="col-sm-12">
-                      <input type="text" class="form-control" id="identifier" name="identifier" #identifier="ngModel" [(ngModel)]="this.cantEvent[0].identifier">
+                      <input type="text" class="form-control" id="identifier" name="identifier" #identifier="ngModel" [(ngModel)]="this.cantEvent[i].identifier">
                     </div>
                   </div>
                 </th>
                 <th>
                   <div class="form-group row">
                     <div class="col-sm-14">
-                      <input type="text" class="form-control" id="value" name="value" #value="ngModel" [(ngModel)]="this.cantEvent[0].value" value="{{this.latitudeMark}},{{this.longitudeMark}}">
+                      <input type="text" class="form-control" id="value" name="value" #value="ngModel" [(ngModel)]="this.cantEvent[i].value" value="{{this.latitudeMark}},{{this.longitudeMark}}">
                     </div>
                   </div>
                 </th>
@@ -267,34 +266,41 @@
                 <th>
                   <div class="form-group row">
                     <div class="col-sm-12">
-                      <input type="text" class="form-control" id="time" name="time" #time="ngModel" [(ngModel)]="this.cantEvent[0].time">
+                      <input type="text" class="form-control" id="time" name="time" #time="ngModel" [(ngModel)]="this.cantEvent[i].time">
                     </div>
                   </div>
                 </th>
                 <th>
                   <div class="form-group row">
                     <div class="col-sm-12">
-                      <input type="text" class="form-control" id="probability" name="probability" #probability="ngModel" [(ngModel)]="this.cantEvent[0].probability">
+                      <input type="text" class="form-control" id="probability" name="probability" #probability="ngModel" [(ngModel)]="this.cantEvent[i].probability">
                     </div>
                   </div>
                 </th>
                 <th>
                   <div class="form-group row">
                     <div class="col-sm-12">
-                      <input type="text" class="form-control" id="depEvents" name="depEvents" #depEvents="ngModel" [(ngModel)]="this.cantEvent[0].depEvents">
+                      <input type="text" class="form-control" id="depEvents" name="depEvents" #depEvents="ngModel" [(ngModel)]="this.cantEvent[i].depEvents">
                     </div>
                   </div>
                 </th>
                 <th>
                   <div class="form-group row">
                     <div class="col-sm-12">
-                      <input type="text" class="form-control" id="depAct" name="depAct" #depAct="ngModel" [(ngModel)]="this.cantEvent[0].depAct">
+                      <input type="text" class="form-control" id="depAct" name="depAct" #depAct="ngModel" [(ngModel)]="this.cantEvent[i].depAct">
                     </div>
                   </div>
                 </th>
               </tr>
             </tbody>
           </table>
+        </div>
+        <div class="">
+            <div class="new">
+              <button type="button" name="button"><i class="fa fa-plus-circle" aria-hidden="true" (click)="moreEvents()"></i></button>
+            </div>
+          <br>
+
         </div>
         <div>
           <button mat-button matStepperPrevious>Volver</button>
