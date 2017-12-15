@@ -256,12 +256,14 @@
                 <th>
                   <div class="form-group row">
                     <div class="col-sm-14">
-                      <input type="text" class="form-control" id="value" name="value" #value="ngModel" [(ngModel)]="this.cantEvent[i].value" value="{{this.latitudeMark}},{{this.longitudeMark}}">
+                      <input type="text" class="form-control" id="value" name="value" #value="ngModel" [(ngModel)]="this.cantEvent[i].value" value="{{this.marks[i]}}">
                     </div>
                   </div>
                 </th>
                 <th>
-                  <i class="fa fa-map-pin" aria-hidden="true"></i>
+                  <div class="new">
+                    <button type="button" name="button" (click)="mark(i)"><i class="fa fa-map-pin" aria-hidden="true"></i></button>
+                  </div>
                 </th>
                 <th>
                   <div class="form-group row">

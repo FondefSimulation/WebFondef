@@ -23,10 +23,11 @@ export class EditComponent implements OnInit {
   public cant = 1;
   public script = new Script( '', 0, '' );
   public cantEvent;
+  marks = [];
   isLinear = false;
   firstForm: FormGroup;
-  secondForm: FormGroup;
   thirdForm: FormGroup;
+
 
   constructor(
     private _consumeRestAPIService: ConsumeRestAPIService,
@@ -46,16 +47,6 @@ export class EditComponent implements OnInit {
       time: ['', Validators.required],
       stage: ['', Validators.required]
     });
-    this.secondForm = this._formBuilder.group({
-      event: ['', Validators.required],
-      type: ['', Validators.required],
-      identifier: ['', Validators.required],
-      values: ['', Validators.required],
-      time: ['', Validators.required],
-      probability: ['', Validators.required],
-      depEvents: ['', Validators.required],
-      depAct: ['', Validators.required]
-    });
     this.thirdForm = this._formBuilder.group({
       desc: ['', Validators.required]
     });
@@ -70,10 +61,16 @@ export class EditComponent implements OnInit {
   placeMarker( $event, data){
     this.latitudeMark = $event.coords.lat;
     this.longitudeMark = $event.coords.lng;
-    this.cantEvent[0].values.latitude = this.latitudeMark;
-    this.cantEvent[0].values.longitude = this.longitudeMark;
-    console.log(this.cantEvent[0])
   }
+
+  mark( index ){
+    this.marks[index] = [this.latitudeMark,this.longitudeMark];
+    this.cantEvent[0].values.latitude = this.marks[index][0];
+    this.cantEvent[0].values.longitude = this.marks[index][1];
+    console.log(this.cantEvent[index])
+    console.log(this.marks)
+  }
+
   test(){
     console.log(this.firstForm.value)
     console.log(this.thirdForm.value)
