@@ -20,16 +20,16 @@
     <!-- Checkbox Column -->
     <ng-container matColumnDef="select">
       <mat-header-cell *matHeaderCellDef>
-        <!-- <mat-checkbox (change)="$event ? masterToggle() : null"
+        <mat-checkbox (change)="$event ? masterToggle() : null"
                      [checked]="isAllSelected()"
                      [indeterminate]="selection.hasValue() && !isAllSelected()">
-        </mat-checkbox> -->
+        </mat-checkbox>
       </mat-header-cell>
       <mat-cell *matCellDef="let row">
-        <!-- <mat-checkbox (click)="$event.stopPropagation()"
+        <mat-checkbox (click)="$event.stopPropagation()"
                      (change)="$event ? selection.toggle(row.id) : null"
                      [checked]="selection.isSelected(row.id)">
-        </mat-checkbox> -->
+        </mat-checkbox>
       </mat-cell>
     </ng-container>
 

@@ -7,7 +7,7 @@ import { APP_ROUTING, ROUTINGPROVIDERS } from './app.routing';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AgmCoreModule } from '@agm/core';
 import { SelectModule } from 'angular2-select';
-import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatInputModule, MatSnackBarModule, MatStepperModule, MatStepperIntl, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatInputModule, MatSnackBarModule, MatStepperModule, MatStepperIntl, MatTableModule, MatPaginatorModule, MatSortModule, MatCheckboxModule } from '@angular/material';
 import { ChartsModule } from 'ng2-charts';
 import { HttpClientModule }    from '@angular/common/http';
 
@@ -76,6 +76,7 @@ import { EventsComponent } from './components/events/events.component';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatCheckboxModule,
     ChartsModule,
     HttpClientModule,
     ROUTINGPROVIDERS,
