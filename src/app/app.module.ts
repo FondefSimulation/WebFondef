@@ -7,7 +7,7 @@ import { APP_ROUTING, ROUTINGPROVIDERS } from './app.routing';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AgmCoreModule } from '@agm/core';
 import { SelectModule } from 'angular2-select';
-import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatInputModule, MatSnackBarModule, MatStepperModule, MatStepperIntl } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatInputModule, MatSnackBarModule, MatStepperModule, MatStepperIntl, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { ChartsModule } from 'ng2-charts';
 import { HttpClientModule }    from '@angular/common/http';
 
@@ -33,6 +33,7 @@ import { FooterComponent } from './components/footer/footer.component';
 
 //Servicios
 import { SearchPipe } from './pipes/search.pipes';
+import { EventsComponent } from './components/events/events.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { SearchPipe } from './pipes/search.pipes';
     DesingComponent,
     UsersComponent,
     FooterComponent,
-    SearchPipe
+    SearchPipe,
+    EventsComponent
   ],
   imports: [
     BrowserModule,
@@ -71,6 +73,9 @@ import { SearchPipe } from './pipes/search.pipes';
     MatInputModule,
     MatSnackBarModule,
     MatStepperModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
     ChartsModule,
     HttpClientModule,
     ROUTINGPROVIDERS,

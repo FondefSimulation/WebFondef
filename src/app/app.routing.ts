@@ -14,6 +14,7 @@ import { ViewComponent } from './components/view/view.component';
 import { EditComponent } from './components/edit/edit.component';
 import { DesingComponent } from './components/desing/desing.component';
 import { UsersComponent } from './components/users/users.component';
+import { EventsComponent } from './components/events/events.component';
 
 
 const APP_ROUTES: Routes = [
@@ -29,6 +30,7 @@ const APP_ROUTES: Routes = [
   { path: 'edit', component: EditComponent },
   { path: 'desing', component: DesingComponent },
   { path: 'users', component: UsersComponent },
+  { path: 'events', component: EventsComponent },
   { path: '**', pathMatch: 'full', component: HomeComponent },
 ];
 
