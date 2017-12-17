@@ -200,7 +200,7 @@
         <br>
       </form>
       <div>
-        <button mat-button matStepperNext (click)="test()">Siguiente</button>
+        <button mat-button matStepperNext>Siguiente</button>
       </div>
     </mat-step>
 
@@ -211,6 +211,8 @@
         <agm-map [latitude]="lat" [longitude]="lng" (mapClick)="placeMarker($event)">
           <agm-marker [latitude]="latitudeMark" [longitude]="longitudeMark" [markerDraggable]="false"></agm-marker>
         </agm-map>
+        <br>
+        <app-timeline></app-timeline>
         <br>
         <div class="table-responsive">
           <table class="table">
@@ -225,14 +227,13 @@
                 <th>Probabilidad</th>
                 <th>Nº de dependencias con el Evento</th>
                 <th>Nº de dependencias con los Actores</th>
-                <!-- <th>Eliminar</th> -->
               </tr>
             </thead>
             <tbody *ngFor="let item of cantEvent; let i = index">
               <tr>
                 <th>
                   <div class="col-sm-12">
-                    <select class="custom-select mr-sm-8" id="ev" name="ev" #ev="ngModel" [(ngModel)]=" this.cantEvent[i].type ">
+                    <select class="custom-select mr-sm-8" id="ev" name="ev" #ev="ngModel" [(ngModel)]=" this.cantEvent[i].type">
                       <option class="placeholder" selected disabled value="">- Seleccionar tipo -</option>
                       <option value="1">Seleccion 01</option>
                       <option value="2">Seleccion 02</option>
@@ -297,11 +298,6 @@
                     </div>
                   </div>
                 </th>
-                <!-- <th>
-                  <div class="new">
-                    <button type="button" name="button" (click)="deleteEvent(i)"><i class="fa fa-minus" aria-hidden="true"></i></button>
-                  </div>
-                </th> -->
               </tr>
             </tbody>
           </table>
@@ -313,11 +309,12 @@
           <br>
 
         </div>
+      <form [formGroup]="secondForm">
         <div>
           <button mat-button matStepperPrevious>Volver</button>
           <button mat-button matStepperNext (click)="test()">Siguiente</button>
         </div>
-      <!-- </form> -->
+      </form>
     </mat-step>
     <mat-step [stepControl]="thirdForm">
       <form [formGroup]="thirdForm">
@@ -327,7 +324,7 @@
         </textarea>
         <div>
           <button mat-button matStepperPrevious>Volver</button>
-          <button mat-button matStepperNext (click)="test()">Finalizar</button>
+          <button mat-button matStepperNext>Finalizar</button>
         </div>
       </form>
     </mat-step>

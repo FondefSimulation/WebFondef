@@ -42,13 +42,15 @@
     background: none !important;
     color: white;
     border: none;
-    padding: 5px! important;
+    padding: 10px! important;
     font: inherit;
     cursor: pointer;
     outline: inherit !important;
     font-weight: 400;
     background-color: #3f51b5 !important;
-
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 .title{
   color: #5A738E;

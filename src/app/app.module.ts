@@ -7,7 +7,7 @@ import { APP_ROUTING, ROUTINGPROVIDERS } from './app.routing';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AgmCoreModule } from '@agm/core';
 import { SelectModule } from 'angular2-select';
-import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatInputModule, MatSnackBarModule, MatStepperModule, MatStepperIntl, MatTableModule, MatPaginatorModule, MatSortModule, MatCheckboxModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatInputModule, MatSnackBarModule, MatStepperModule, MatStepperIntl, MatTableModule, MatPaginatorModule, MatSortModule, MatCheckboxModule, MatTooltipModule } from '@angular/material';
 import { ChartsModule } from 'ng2-charts';
 import { HttpClientModule }    from '@angular/common/http';
 
@@ -34,6 +34,7 @@ import { FooterComponent } from './components/footer/footer.component';
 //Servicios
 import { SearchPipe } from './pipes/search.pipes';
 import { EventsComponent } from './components/events/events.component';
+import { TimelineComponent } from './components/timeline/timeline.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { EventsComponent } from './components/events/events.component';
     UsersComponent,
     FooterComponent,
     SearchPipe,
-    EventsComponent
+    EventsComponent,
+    TimelineComponent
   ],
   imports: [
     BrowserModule,
@@ -77,6 +79,7 @@ import { EventsComponent } from './components/events/events.component';
     MatPaginatorModule,
     MatSortModule,
     MatCheckboxModule,
+    MatTooltipModule,
     ChartsModule,
     HttpClientModule,
     ROUTINGPROVIDERS,

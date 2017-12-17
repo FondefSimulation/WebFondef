@@ -24,8 +24,9 @@ export class EditComponent implements OnInit {
   public script = new Script( '', 0, '' );
   public cantEvent;
   marks = [];
-  isLinear = false;
+  isLinear = true;
   firstForm: FormGroup;
+  secondForm: FormGroup;
   thirdForm: FormGroup;
 
 
@@ -46,6 +47,9 @@ export class EditComponent implements OnInit {
       name: ['', Validators.required],
       time: ['', Validators.required],
       stage: ['', Validators.required]
+    });
+    this.secondForm = this._formBuilder.group({
+      go: ['go', Validators.required],
     });
     this.thirdForm = this._formBuilder.group({
       desc: ['', Validators.required]
@@ -72,7 +76,9 @@ export class EditComponent implements OnInit {
   }
 
   test(){
+    this.secondForm.value.go = 'go';
     console.log(this.firstForm.value)
+    console.log(this.secondForm.value)
     console.log(this.cantEvent)
     console.log(this.thirdForm.value)
   }
