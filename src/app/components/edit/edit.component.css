@@ -128,3 +128,7 @@ button{
   background-color: #3f51b5 !important;
   color: white;
 }
+
+.timeline{
+  background-color: red;
+}

@@ -30,11 +30,11 @@ import { EditComponent } from './components/edit/edit.component';
 import { DesingComponent } from './components/desing/desing.component';
 import { UsersComponent } from './components/users/users.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { TimelineComponent } from './components/timeline/timeline.component';
 
 //Servicios
 import { SearchPipe } from './pipes/search.pipes';
 import { EventsComponent } from './components/events/events.component';
-import { TimelineComponent } from './components/timeline/timeline.component';
 
 @NgModule({
   declarations: [
