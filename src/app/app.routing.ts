@@ -15,6 +15,7 @@ import { EditComponent } from './components/edit/edit.component';
 import { DesingComponent } from './components/desing/desing.component';
 import { UsersComponent } from './components/users/users.component';
 import { EventsComponent } from './components/events/events.component';
+import { TimelineComponent } from './components/timeline/timeline.component';
 
 
 const APP_ROUTES: Routes = [
@@ -31,6 +32,7 @@ const APP_ROUTES: Routes = [
   { path: 'desing', component: DesingComponent },
   { path: 'users', component: UsersComponent },
   { path: 'events', component: EventsComponent },
+  { path: 'time', component: TimelineComponent },
   { path: '**', pathMatch: 'full', component: HomeComponent },
 ];
 
