@@ -56,7 +56,7 @@ export class EditComponent implements OnInit {
     private _formBuilder: FormBuilder
   ) {
     this.cantEvent.push(new Event( '', '', '', { longitude: 0, latitude: 0}, 0, 0, 0, 0, '' ));
-    this._consumeRestAPIService.GetTypeDisaster().subscribe( response => { this.disasters = response.data; console.log(this.disasters)});
+    this._consumeRestAPIService.GetTypeDisaster().subscribe( response => { this.disasters = response.data; });
   }
 
   ngOnInit() {
@@ -82,7 +82,7 @@ export class EditComponent implements OnInit {
     // this.cantEvent[newEvent] = new Event(  '', '', '', { longitude: 0, latitude: 0}, 0, 0, 0, 0, ''  )
     this.cantEvent.push(new Event(  '', '', '', { longitude: 0, latitude: 0}, 0, 0, 0, 0, ''  ))
     // this.cant = this.cant + 1;
-    console.log(this.cantEvent)
+
   }
 
   deleteEvent( position ){
@@ -104,10 +104,6 @@ export class EditComponent implements OnInit {
 
   test(){
     this.secondForm.value.go = 'go';
-    console.log(this.firstForm.value)
-    console.log(this.secondForm.value)
-    console.log(this.cantEvent)
-    console.log(this.thirdForm.value)
   }
 
 }
