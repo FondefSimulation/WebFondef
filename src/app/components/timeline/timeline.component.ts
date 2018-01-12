@@ -94,6 +94,7 @@ export class TimelineComponent implements AfterViewInit {
   private _timelineElements: TimelineElement[];
 
   get timelineElements(): TimelineElement[] {
+    console.log(this._timelineElements)
     return this._timelineElements;
   }
 
