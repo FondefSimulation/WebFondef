@@ -63,7 +63,7 @@
     </ul>
   </div>
 
-  <div class="events-content" *ngIf="showContent">
+  <!-- <div class="events-content" *ngIf="showContent">
     <ol>
       <li *ngFor="let item of timelineElements; let index = index"
           [@contentState]="item.selected ? 'active' : (index < selectedIndex ? 'left' : 'right')">
@@ -72,5 +72,5 @@
         <p>{{item.content}}</p>
       </li>
     </ol>
-  </div>
+  </div> -->
 </section>

@@ -65,10 +65,17 @@ export class ConsumeRestAPIService{
                        .map( res => res.json() );
     }
 
+    createScript( Script ){
+      let params = JSON.stringify({ "dataScript": Script });
+      let headers = new Headers({ 'Content-Type': 'application/json' });
+      let options = new RequestOptions({ headers: headers });
+      return this._http.post( this.url + 'SimAPI/createScript/', params, options )
+                       .map( res => res.json() );
+    }
+
     GetRunningSimulation( disaster ){
       let params = JSON.stringify({ "sessionType": disaster });
       let headers = new Headers({ 'Content-Type': 'application/json' });
-
       return  this._http.post( this.url + 'SimAPI/GetRunningSimulations/', params, { headers:headers } )
                         .map( res=> res.json());
       //recive idSession, nameSession
@@ -78,6 +85,11 @@ export class ConsumeRestAPIService{
      /* return  this._http.get( this.url + 'SimAPI/GetTypeDisaster/' )
                         .map(( res:Response ) => res.json());*/
                         return  this._http.get( this.url + 'SimAPI/GetTypeDisaster/' )
+                        .map( res => res.json());
+    }
+
+    getEvents(){
+      return  this._http.get( this.url + 'SimAPI/getEvents/' )
                         .map( res => res.json());
     }
 
@@ -91,8 +103,10 @@ export class ConsumeRestAPIService{
     StartSimulation( idSession ){
       //envia id sesion
       let params = JSON.stringify({ "id_session": idSession });
-      return  this._http.put( this.url + 'SimAPI/StartSimulation/', params )
-                        .map(( res:Response ) => res.json());
+      let headers = new Headers({ 'Content-Type': 'application/json' });
+      console.log("idsession : "+ idSession);
+      return  this._http.post( this.url + 'SimAPI/StartSimulation/', params,{ headers:headers } )
+                        .map( res=> res.json());
     }
 
     getIdentity(){

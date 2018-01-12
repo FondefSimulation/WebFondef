@@ -193,11 +193,9 @@
         <div class="form-group row">
           <label class="col-sm-6 col-form-label">Escenario</label>
           <div class="col-sm-6">
-            <select class="custom-select mr-sm-8" formControlName="stage">
+            <select class="custom-select mr-sm-8" formControlName="stage" [(ngModel)]="stage">
               <option class="placeholder" selected disabled value="">- Seleccionar Escenario -</option>
-              <option value="1" >{{disasters[0].name}} - {{disasters[0].location}}</option>
-              <option value="2" >{{disasters[1].name}} - {{disasters[1].location}}</option>
-              <option value="3" >{{disasters[2].name}} - {{disasters[2].location}}</option>
+              <option value="i" *ngFor="let item of disasters; let i = index">{{item.name - item.location}}</option>
             </select>
           </div>
         </div>
@@ -232,6 +230,7 @@
                 <th>Probabilidad</th>
                 <th>Nº de dependencias con el Evento</th>
                 <th>Nº de dependencias con los Actores</th>
+                <th>Borrar</th>
               </tr>
             </thead>
             <tbody *ngFor="let item of cantEvent; let i = index">
@@ -307,6 +306,13 @@
                   <div class="form-group row">
                     <div class="col-sm-12">
                       <input type="text" class="form-control" id="depAct" name="depAct" #depAct="ngModel" [(ngModel)]="this.cantEvent[i].depAct">
+                    </div>
+                  </div>
+                </th>
+                <th>
+                  <div class="form-group row">
+                    <div class="col-sm-12">
+                      <button type="button" name="button"><i class="fa fa-minus-circle" aria-hidden="true" (click)="deleteEvent(i)"></i></button>
                     </div>
                   </div>
                 </th>

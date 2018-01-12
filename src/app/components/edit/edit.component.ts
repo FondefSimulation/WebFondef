@@ -24,7 +24,7 @@ export class EditComponent implements OnInit {
   public longitudeMark: number;
   public cant = 1;
   public script = new Script( '', 0, '' );
-  public cantEvent;
+  public cantEvent = new Array();
   marks = [];
   isLinear = false;
   firstForm: FormGroup;
@@ -55,13 +55,13 @@ export class EditComponent implements OnInit {
     private _router: Router,
     private _formBuilder: FormBuilder
   ) {
-    this.cantEvent = [new Event( '', '', '', { longitude: 0, latitude: 0}, 0, 0, 0, 0, '' )];
+    this.cantEvent.push(new Event( '', '', '', { longitude: 0, latitude: 0}, 0, 0, 0, 0, '' ));
+    this._consumeRestAPIService.GetTypeDisaster().subscribe( response => { this.disasters = response.data; console.log(this.disasters)});
   }
 
   ngOnInit() {
     this.lat = -38.735222;
     this.lng = -72.586267;
-    this._consumeRestAPIService.GetTypeDisaster().subscribe( response => { this.disasters = response.data; });
     this.identity = this._consumeRestAPIService.getIdentity();
     this.type = this._consumeRestAPIService.getType();
     this.firstForm = this._formBuilder.group({
@@ -78,9 +78,17 @@ export class EditComponent implements OnInit {
   }
 
   moreEvents(){
-    var newEvent = '' + this.cant;
-    this.cantEvent[newEvent] = new Event(  '', '', '', { longitude: 0, latitude: 0}, 0, 0, 0, 0, ''  )
-    this.cant = this.cant + 1;
+    // var newEvent = '' + this.cant;
+    // this.cantEvent[newEvent] = new Event(  '', '', '', { longitude: 0, latitude: 0}, 0, 0, 0, 0, ''  )
+    this.cantEvent.push(new Event(  '', '', '', { longitude: 0, latitude: 0}, 0, 0, 0, 0, ''  ))
+    // this.cant = this.cant + 1;
+    console.log(this.cantEvent)
+  }
+
+  deleteEvent( position ){
+    var arr = this.cantEvent;
+    var removed = arr.splice( position, 1);
+    this.cantEvent = this.cantEvent;
   }
 
   placeMarker( $event, data){

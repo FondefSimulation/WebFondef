@@ -10,7 +10,7 @@ import { SelectModule } from 'angular2-select';
 import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatInputModule, MatSnackBarModule, MatStepperModule, MatStepperIntl, MatTableModule, MatPaginatorModule, MatSortModule, MatCheckboxModule, MatTooltipModule } from '@angular/material';
 import { ChartsModule } from 'ng2-charts';
 import { HttpClientModule }    from '@angular/common/http';
-
+import { WebSocketService } from 'angular2-websocket-service';
 
 
 //Components
